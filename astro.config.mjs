@@ -12,4 +12,13 @@ export default defineConfig({
   adapter: netlify({
     edgeMiddleware: true,
   }),
+
+  vite: {
+    build: {
+      cssMinify: "lightningcss",
+    },
+    ssr: {
+      noExternal: ["path-to-regexp"],
+    },
+  },
 });

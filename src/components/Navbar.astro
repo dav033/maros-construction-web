@@ -8,7 +8,21 @@ import MobileLogo from "./index/MobileLogo.astro";
 ---
 
 <script>
+  let page;
 
+  function updatePage() {
+    page = window.location.pathname;
+    page = page.substring(page.lastIndexOf("/") + 1);
+    let navbar = document.querySelector(".navbar-v2");
+    navbar.classList.add(page);
+    console.log(page);
+    
+    alert("a")
+  }
+
+  updatePage();
+
+  window.addEventListener("popstate", updatePage);
 </script>
 
 <nav class={`navbar-v2`}>
@@ -20,7 +34,7 @@ import MobileLogo from "./index/MobileLogo.astro";
 
   <LinksDesktop />
 
-  <Sidebar  client:load/>
+  <Sidebar client:load />
 </nav>
 
 <style>
