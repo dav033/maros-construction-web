@@ -1,0 +1,94 @@
+.sidebarContainer .sidebar {
+  position: fixed;
+  top: -100%; /* El menú está inicialmente fuera de la pantalla */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 22, 50, 0.95); /* Ahora es semitransparente */
+  transition: top 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: block;
+  z-index: 1000000;
+  flex-direction: column;
+  padding-top: 30px;
+  overflow: none;
+  margin: 0;
+}
+
+.sidebarContainer {
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.sidebarContainer .sidebar a,
+.sidebarContainer .sidebar .services h4 {
+  color: #dedbdb !important;
+  text-decoration: none;
+  font-family: "Gotham", sans-serif;
+  text-transform: uppercase;
+  height: 100px;
+  width: 100%;
+  padding: 10px 20px;
+  font-weight: 800;
+  font-size: 23px;
+}
+
+.sidebarContainer .sidebar .services {
+  /* background-color: red; */
+  box-sizing: border-box;
+  padding-top: 25px;
+  margin-top: 20px;
+}
+
+.sidebarContainer .sidebar .close {
+  background-color: transparent;
+  border: none;
+  float: right;
+  margin-right: 10px;
+}
+
+.sidebarContainer .sidebar .close .icon {
+  color: #dedbdb;
+  font-size: 28px;
+}
+
+.sidebarContainer .sidebar .services a {
+  font-size: 15px;
+  font-family: "Gotham", sans-serif;
+  padding: none;
+  font-weight: 200;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+.sidebarContainer .sidebar .services h4 {
+  height: inherit !important;
+  padding: none !important;
+  margin-bottom: 15px;
+}
+.sidebarContainer .hamburger {
+  display: none;
+  background-color: transparent;
+  border: none;
+  float: right;
+}
+
+.services .sidebarContainer .hamburger .icon {
+  color: black;
+}
+
+.sidebarContainer .hamburger .icon {
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.sidebarContainer .sidebar.open {
+  top: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .sidebarContainer .hamburger {
+    display: block;
+  }
+}

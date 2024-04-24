@@ -1,0 +1,51 @@
+---
+let { src } = Astro.props;
+---
+
+<video autoplay muted loop class="video">
+  <source src={src} type="video/webm" /></video
+>
+
+<style>
+  .video {
+    width: 410px;
+    height: 580px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .video {
+      width: 355px;
+      height: 532.5px;
+    }
+  }
+
+  @media screen and (max-width: 980px) {
+    .video {
+      width: 295;
+      height: 442.5px;
+    }
+  }
+
+  @media screen and (max-width: 770px) {
+    .video {
+      width: 245px;
+      height: 368px;
+    }
+
+    @media screen and (max-width: 650px) {
+      .video {
+        width: 100% !important;
+        height: 750px;
+        margin-bottom: 40px;
+      }
+    }
+
+    @media screen and (max-width: 520px) {
+      .video {
+        height: calc(var(--width) * 1.2);
+
+        margin-bottom: 30px;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,37 @@
+---
+import reel1 from "../../assets/videos/reel1.webm";
+import reel2 from "../../assets/videos/reel2.webm";
+import reel3 from "../../assets/videos/reel3.webm";
+import ExampleVideo from "./ExampleVideo.astro";
+---
+
+<section class="videos">
+  <ExampleVideo src={reel1} />
+
+  <ExampleVideo src={reel2} />
+
+  <ExampleVideo src={reel3} />
+</section>
+
+<style>
+  .videos {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  @media (max-width: 840px) {
+    .videos {
+      padding: 5px 10px;
+    }
+  }
+
+  @media (max-width: 650px) {
+    .videos {
+      flex-direction: column;
+    }
+  }
+</style>

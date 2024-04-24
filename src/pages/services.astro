@@ -1,0 +1,101 @@
+---
+import Layout from "../layouts/Layout.astro";
+import images from "../images";
+import ServicePageItem from "../components/services/ServicePageItem.astro";
+import PresentationBanner from "../components/services/PresentationBanner.astro";
+import Introduction from "../components/services/Introduction.astro";
+
+const services = [
+  {
+    title: "Concrete Repair",
+    image: images.lath,
+    id: "concrete",
+    imageMedium: images.lathMedium,
+  },
+  {
+    title: "Driveways",
+    image: images.driveway,
+    id: "driveways",
+    imageMedium: images.lathMedium,
+  },
+  {
+    title: "Sidewalks",
+    image: images.sidewalk,
+    id: "sidewalks",
+    imageMedium: images.lathMedium,
+  },
+  {
+    title: "Decks",
+    image: images.decks,
+    id: "decks",
+    imageMedium: images.lathMedium,
+  },
+];
+
+const serviceDescription = `Enhance the beauty and ambiance of your spaces with our expert
+painting services. Whether you require interior or exterior painting,
+our team will provide meticulous attention to detail, ensuring a
+flawless and long-lasting finish. We work closely with our clients to
+understand their preferences and deliver personalized results`;
+---
+
+<script>
+  function scrollToSection(sectionId) {
+    var section = document.getElementById(sectionId);
+    if (sectionId && section) {
+      window.scrollTo({
+        top: section.offsetTop - 100,
+        behavior: "smooth",
+      });
+    }
+  }
+
+  const initialize = () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const option = urlParams.get("option");
+
+    if (option) {
+      scrollToSection(option);
+    }
+  };
+
+  initialize();
+</script>
+<Layout>
+  <main class="servicesPage">
+    <PresentationBanner />
+
+    <Introduction />
+    {
+      services.map((service) => (
+        <ServicePageItem
+          title={service.title}
+          images={{ default: service.image, medium: service.imageMedium }}
+          idSection={service.id}
+        >
+          {serviceDescription}
+        </ServicePageItem>
+      ))
+    }
+  </main>
+</Layout>
+
+<style>
+  .servicesPage {
+    background-color: var(--white);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 250px 250px;
+    padding-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 40px;
+  }
+
+  @media (max-width: 1000px) {
+    .servicesPage {
+      padding: 0;
+    }
+  }
+</style>

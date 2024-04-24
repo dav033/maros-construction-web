@@ -1,0 +1,240 @@
+.serviceSection {
+  text-align: center;
+  display: flex;
+  height: 70vh;
+  padding-left: 150px;
+  padding-right: 150px;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.serviceSection:last-child {
+  flex-direction: row-reverse;
+}
+
+.serviceSection .body {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 65px 71px;
+  justify-content: flex-start;
+  margin-bottom: 100px;
+  height: 80%;
+  box-sizing: content-box;
+}
+
+.serviceSection .body button {
+  width: 150px;
+  height: 60px;
+  background-color: transparent;
+  padding: 10px 20px;
+  border: 2px solid #F58840;
+  font-size: 15px;
+  font-family: "Gotham";
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #F58840;
+  cursor: pointer;
+}
+
+.serviceSection .body h2 {
+  font-size: 36px;
+  font-weight: 800;
+  font-family: "Gotham";
+  font-weight: bold;
+  letter-spacing: 0.08471rem;
+  text-transform: uppercase;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.serviceSection .body p {
+  font-family: "Gotham";
+  font-size: 17px;
+  font-weight: 200;
+  text-align: justify;
+  line-height: 36px;
+  margin-bottom: 20px;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.serviceSection .servicesList {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 40px;
+}
+
+.serviceSection .servicesList .item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: flex-start;
+  margin-bottom: 40px;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s, fill 0.3s, stroke 0.3s;
+}
+
+.serviceSection .servicesList .item:hover {
+  color: #F58840;
+}
+
+.serviceSection .servicesList .item:hover .icon,
+.serviceSection .servicesList .item:hover h1 {
+  fill: #F58840 !important;
+  stroke: #F58840 !important;
+  color: #F58840 !important;
+}
+
+.serviceSection .servicesList .item h1 {
+  font-family: "Gotham";
+  font-weight: 200;
+  font-size: 30px;
+  color: var(--white);
+}
+
+.serviceSection .servicesList .item .icon {
+  font-family: "Gotham";
+  font-weight: 100;
+  margin-right: 20px;
+  font-size: 32px;
+  fill: var(--white);
+  stroke: var(--white);
+  color: var(--white);
+}
+
+@media (max-width: 1350px) {
+  .serviceSection {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .serviceSection {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .serviceSection .servicesList .item h1 {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .serviceSection,
+  .serviceSection:last-child {
+    flex-direction: column-reverse;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .serviceSection .body {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 30px;
+    width: 90%;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  .serviceSection .body p {
+    width: 100%;
+  }
+
+  .serviceSection .servicesList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: fit-content;
+    gap: 40px;
+    padding: 0;
+    justify-items: start;
+    width: 100%;
+    /* background-color: red; */
+  }
+
+  .serviceSection .servicesList .item {
+    width: fit-content;
+    justify-content: center;
+    justify-content: center;
+    box-sizing: content-box;
+    margin: 10px 60px;
+    padding: 0;
+  }
+
+  .serviceSection .servicesList .item h1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .serviceSection .body h2 {
+    font-size: 30px;
+  }
+
+  .serviceSection .body p {
+    font-size: 15px;
+  }
+  .serviceSection .servicesList .item h1 {
+    font-size: 18px;
+    word-break: keep-all;
+  }
+
+  .serviceSection .servicesList {
+    gap: 20px;
+  }
+
+  .serviceSection .servicesList .item .icon {
+    font-size: 24px;
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 800px) {
+  .serviceSection .body button {
+    width: 120px;
+    height: 50px;
+    font-size: 13px;
+  }
+
+  .serviceSection .body {
+    padding: 10px;
+  }
+  .serviceSection .servicesList {
+    gap: 10px;
+  }
+
+  .serviceSection .servicesList .item {
+    margin: 10px 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .serviceSection {
+    padding: 0;
+  }
+
+  .serviceSection .body {
+    padding: 10px;
+  }
+
+  .serviceSection .body h2 {
+    font-size: 25px;
+  }
+
+  .serviceSection .body button {
+    width: 100%;
+    height: 50px;
+    font-size: 13px;
+  }
+
+  .serviceSection .servicesList .item {
+    margin: 10px 20px;
+  }
+}

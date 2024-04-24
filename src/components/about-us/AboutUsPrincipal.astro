@@ -1,0 +1,137 @@
+---
+import image from "../../assets/images/howei-wang-iPMUXsSjrmE-unsplash.webp";
+---
+
+<section class="principal">
+  <div>
+    <h1>Who Are We?</h1>
+
+    <img src={image.src} alt="sampleImage" />
+
+    <p>
+      Welcome to Maros Construction, your trusted partner for your project, we
+      offer the most flexible and reliable team for all your construction ideas.
+      We understand every project is unique, That’s why we offer a dedicated
+      team who bring diverse expertise and creative options to the table. This
+      ensures we craft a custom-tailored solution for each client, exceeding
+      expectations and delivering results.
+    </p>
+  </div>
+</section>
+
+<style>
+  .principal {
+    height: 100vh;
+
+    padding-top: 90px;
+    background-image: url("../../assets/images/howei-wang-iPMUXsSjrmE-unsplash.webp");
+    background-size: cover;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .principal img {
+    display: none;
+  }
+
+  .principal div {
+    width: 50%;
+    left: 7%;
+    position: relative;
+    top: 20%;
+  }
+  .principal h1,
+  .principal p {
+    color: var(--white) !important;
+    position: relative;
+    z-index: 20;
+  }
+
+  .principal h1 {
+    font-size: 3.4rem;
+    margin-bottom: 45px;
+    font-family: "Gotham";
+    word-spacing: 5px;
+  }
+
+  .principal p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    width: 80%;
+    font-family: "Roboto";
+  }
+
+  .principal::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+  }
+
+  @media (max-width: 1150px) {
+    .principal div {
+      width: 60%;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .principal {
+      padding: 0;
+      height: 100%;
+      background-color: var(--main-bg-color);
+      background-image: none;
+      /* padding-top: 100px; */
+    }
+
+    .principal::before {
+      display: none;
+    }
+
+    .principal img {
+      display: block;
+      object-fit: cover;
+      max-height: 50vw;
+      margin-bottom: 20px;
+    }
+
+    .principal div {
+      display: flex;
+      flex-direction: column;
+      /* align-items: center; */
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      left: inherit;
+      position: relative;
+      top: inherit;
+      padding: 0;
+    }
+
+    .principal h1 {
+      font-size: 2.5rem;
+      text-align: left;
+      font-weight: 300;
+      margin-left: 20px;
+      margin-top: 120px;
+    }
+
+    .principal p {
+      font-size: 16px;
+      font-weight: 200;
+      text-align: justify;
+      line-height: 36px;
+      margin-bottom: 15px;
+      -webkit-font-smoothing: antialiased;
+      width: 100%;
+      padding: 10px 30px;
+      font-family: "Gotham";
+      /* background-color: red; */
+    }
+  }
+</style>

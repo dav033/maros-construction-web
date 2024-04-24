@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+@font-face {
+  font-family: "Barlow";
+  src: url("../assets/fonts/Barlow-Regular.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url("../assets/fonts/Barlow-Light.ttf");
+  font-weight: light;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url("../assets/fonts/Barlow-Thin.ttf");
+  font-weight: thin;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/gotham-medium.woff2") format("woff2");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-Light.otf");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/Gotham-Thin.otf");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/gotham-black.woff2") format("woff2");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/gotham-book.woff2") format("woff2");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/roboto-cyrillic-400-italic.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Light.ttf") format("ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "RRoboto";
+  src: url("../assets/fonts/Roboto-Thin.ttf") format("ttf");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "maison";
+  src: url("../assets/fonts/MaisonNeueExtended-Demi.otf");
+}
+
+@font-face {
+  font-family: "lmaison";
+  src: url("../assets/fonts/MaisonNeueExtended-Light.otf");
+}
+
+@font-face {
+  font-family: "Squada One";
+  src: url("../assets/fonts/SquadaOne-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Squada two";
+  src: url("../assets/fonts/montserrat-latin-700-normal.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+:root {
+  --white: #e8e8e8;
+  --main-bg-color: #222831;
+  --main-color: #c40d3b;
+}
+html {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+body {
+  height: 100vh;
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 250px 250px; */
+
+  background-color: var(--white);
+}

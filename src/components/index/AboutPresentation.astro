@@ -1,0 +1,144 @@
+---
+import image from "../../assets/images/xviiizz-Vgv6OOwkTqc-unsplash.jpg";
+---
+
+<section class="aboutPresentation">
+  <div class="main">
+    <div>
+      <span>About Us</span>
+      <h2>Your best option</h2>
+
+      <p>
+        Your trusted partner in construction, we offer the most flexible and
+        reliable team for all your concrete projects and full remodeling.
+      </p>
+
+      <a href = "/about-us"> Learn more </a>
+    </div>
+  </div>
+
+  <div class="image">
+    <img src={image.src} alt="placeholder" />
+  </div>
+</section>
+
+<style>
+  .aboutPresentation {
+    height: calc(100vh - 80px);
+    width: 100%;
+    background-color: var(--main-bg-color);
+    display: flex;
+    justify-content: space-between;
+
+    background:
+      linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+      linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+      linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+      linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+      linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+      linear-gradient(
+        #1d1d1d 25%,
+        #1a1a1a 25%,
+        #1a1a1a 50%,
+        transparent 50%,
+        transparent 75%,
+        #242424 75%,
+        #242424
+      );
+    background-color: #131313;
+    background-size: 20px 20px;
+  }
+
+  .aboutPresentation .main {
+    width: 68%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--white);
+    align-items: center;
+    padding: 0 10%;
+  }
+
+  .aboutPresentation .main div {
+    width: 70%;
+  }
+
+  .aboutPresentation .main h2,
+  .aboutPresentation .main p {
+    font-family: "Barlow";
+    font-weight: thin;
+  }
+
+  .aboutPresentation .main h2 {
+    font-size: 32px;
+    margin-bottom: 1rem;
+    word-spacing: 0.3rem;
+  }
+
+  .aboutPresentation .main p {
+    font-size: 17px;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+
+  .aboutPresentation a {
+    background-color: var(--main-color);
+    color: var(--white);
+    padding: 15px 25px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+
+  }
+
+  .aboutPresentation span {
+    font-size: 14px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    margin-bottom: 10px;
+    display: block;
+    color: #eae7e2;
+    font-family: "Barlow";
+  }
+
+  .aboutPresentation span:before {
+    content: "";
+    height: 1px;
+    background-color: #eae7e2;
+    display: inline-block;
+    vertical-align: middle;
+    opacity: 0.3;
+    width: 40px;
+    margin-right: 10px;
+  }
+  .aboutPresentation a:hover {
+    background-color: #a8042e;
+  }
+
+  .aboutPresentation .image {
+    width: 32%;
+    height: 100%;
+    /* margin-left: 100%; */
+    position: relative;
+  }
+
+  .aboutPresentation .image::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .aboutPresentation img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>

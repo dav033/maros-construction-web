@@ -1,0 +1,73 @@
+---
+let { image, title } = Astro.props;
+---
+
+<div class="process-item">
+  <div class="image">
+    <img src={image} alt="Design" />
+  </div>
+  <h3>{title}</h3>
+  <p>
+    <slot />
+  </p>
+</div>
+
+<style>
+  .process-item {
+    width: 40%;
+    padding: 20px;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 650px;
+  }
+
+  .process-item h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    font-family: "Gotham";
+    font-weight: 300;
+  }
+
+  .process-item p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  .process-item .image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  @media (max-width: 950px) {
+    .process-item {
+      width: 100%;
+    }
+
+    .process-item h3 {
+      font-size: 1.2rem;
+    }
+
+    .process-item p {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .process-item {
+      padding: 10px;
+    }
+
+    .process-item h3 {
+      font-size: 1rem;
+    }
+
+    .process-item p {
+      font-size: 0.8rem;
+    }
+  }
+</style>

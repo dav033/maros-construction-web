@@ -1,0 +1,72 @@
+---
+import ContactForm from "./contactForm.astro";
+---
+
+<section class="contact">
+  <div>
+    <p>We want to get to know you and for you to know us</p>
+    <h2>
+      Get a <span>free</span> consultation
+    </h2>
+  </div>
+
+  <ContactForm />
+</section>
+
+<style>
+  .contact {
+    display: flex;
+    height: 700px;
+    background-image: url("../../assets/images/startae-team-7tXA8xwe4W4-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+  }
+
+  .contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .contact div h2 {
+    color: #eeeeee;
+    font-size: 2.5em;
+    text-align: center;
+    font-family: "Barlow";
+    position: relative;
+  }
+
+  .contact div h2 span {
+    color: var(--main-color);
+  }
+
+  .contact div {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: fit-content;
+    padding: 20px;
+    margin-bottom: 30px
+  }
+
+  .contact div p {
+    color: #eeeeee;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: "Barlow";
+    position: relative;
+    padding: 10px 30px;
+  }
+</style>

@@ -1,0 +1,149 @@
+---
+import LinksDesktop from "./navbar/LinksDesktop.astro";
+import Sidebar from "./navbar/Sidebar.jsx";
+import mobileIcon from "../assets/images/marosicon1.png";
+import mobileIconLight from "../assets/images/marosicon1-light.png";
+import mobileIconDark from "../assets/images/marosicon1-dark.png";
+import MobileLogo from "./index/MobileLogo.astro";
+---
+
+<script>
+  let page;
+
+  function updatePage() {
+    page = window.location.pathname;
+    page = page.substring(page.lastIndexOf("/") + 1);
+    let navbar = document.querySelector(".navbar-v2");
+    navbar.classList.add(page);
+    console.log(page);
+  }
+
+  updatePage();
+
+  window.addEventListener("popstate", updatePage);
+</script>
+
+<nav class={`navbar-v2`}>
+  <a class="logo" href="/"> Maros Construction</a>
+
+  <MobileLogo src={mobileIconLight.src} id="light" />
+
+  <MobileLogo src={mobileIconDark.src} id="dark" />
+
+  <LinksDesktop />
+
+  <Sidebar client:load />
+</nav>
+
+<style>
+  .navbar-v2 {
+    background-color: transparent;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    z-index: 100000;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    color: var(--white);
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 40px;
+  }
+
+  .navbar-v2.services,
+  .navbar-v2.about-us {
+    background-color: var(--white);
+    color: black !important;
+  }
+
+  :global(.navbar-v2 #dark) {
+    display: none;
+  }
+
+  :global(.navbar-v2.services #light) {
+    display: none;
+  }
+
+  .navbar-v2.services .logo,
+  .navbar-v2.about-us .logo {
+    border-color: var(--main-bg-color);
+    color: var(--main-bg-color);
+  }
+
+  .navbar-v2.services:hover::before,
+  .navbar-v2.about-us:hover::before {
+    opacity: 0;
+  }
+
+  .navbar-v2::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-bg-color);
+    transition:
+      top 0.2s ease-in-out,
+      opacity 0.2s ease-in-out;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  .navbar-v2:hover::before {
+    top: 0;
+    opacity: 1;
+  }
+
+  .menu {
+    width: 200px;
+    background-color: red;
+  }
+
+  .navbar-v2.down {
+    transform: translateY(-100%);
+  }
+
+  .navbar-v2.up {
+    transform: translateY(0);
+  }
+
+  .navbar-v2 .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 100;
+    font-size: 32px;
+    cursor: pointer;
+    user-select: none;
+    margin-right: 50px;
+    font-family: "Squada One", sans-serif;
+    border: 0.1px solid var(--white);
+    padding: 10px 20px;
+    height: 60px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .navbar-v2::before {
+      top: -100% !important;
+      opacity: 0 !important;
+    }
+
+    :global(.navbar-v2.services #dark) {
+      display: block;
+    }
+
+    .navbar-v2 .logo {
+      display: none;
+    }
+
+    .navbar-v2 {
+      padding-left: 10px;
+    }
+
+    .navbar-v2.about-us {
+      background-color: transparent;
+    }
+  }
+</style>

@@ -1,0 +1,106 @@
+---
+import ServiceAbout from "./ServiceAbout.jsx";
+import Tail from "../../assets/icons/tail.icon.jsx";
+import Driveway from "../../assets/icons/driveway.icon.jsx";
+import Bricks from "../../assets/icons/bricks.icon.jsx";
+import Deck from "../../assets/icons/deck.icon.jsx";
+import kitchen from "../../assets/icons/kitchen.icon.jsx";
+import renovation from "../../assets/icons/renovations.icon.jsx";
+import addition from "../../assets/icons/addition.icon.jsx";
+import expansion from "../../assets/icons/expansion.icon.jsx";
+
+const concreteData = [
+  {
+    title: "Concrete Repair",
+    Icon: Bricks,
+  },
+  {
+    title: "Driveways",
+    Icon: Driveway,
+  },
+  {
+    title: "Sidewalks",
+    Icon: Tail,
+  },
+  {
+    title: "Decks",
+    Icon: Deck,
+  },
+];
+
+const remodelateData = [
+  {
+    title: "Kitchen Renovation",
+    Icon: kitchen,
+  },
+  {
+    title: "Full Renovation",
+    Icon: renovation,
+  },
+  {
+    title: "Home Additions",
+    Icon: addition,
+  },
+  {
+    title: "Expansions",
+    Icon: expansion,
+  },
+];
+---
+
+<section class="servicesAbout">
+  <h1>What do we do?</h1>
+
+  <div class="services">
+    <ServiceAbout title="Full Remodeling" data={remodelateData}>
+      Transform your space and unlock its full potential with, your trusted
+      full-service, licensed contractor. Our team of qualified professionals is
+      passionate about making your vision a reality, no matter the size or
+      complexity. Whether it's a cozy kitchen refresh, a complete home
+      transformation, or a seamless addition, we're your one-stop shop for
+      expert guidance and impeccable execution.
+    </ServiceAbout>
+    <ServiceAbout title="Concrete Work" data={concreteData}>
+      We specialize in transforming your property with high-quality concrete
+      solutions. From driveways and sidewalks to building stunning stamped
+      concrete patios and decks, we're your one-stop shop for all things
+      concrete.
+    </ServiceAbout>
+  </div>
+</section>
+
+<style>
+  .servicesAbout {
+    background-color: var(--main-bg-color);
+    margin: 0;
+  }
+
+  .servicesAbout h1 {
+    color: var(--white);
+    font-size: 2.7rem;
+    text-align: center;
+    padding: 2rem 0;
+    font-family: "Gotham";
+    letter-spacing: 1px;
+    font-weight: 200;
+  }
+
+  .servicesAbout .services {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 1000px) {
+    .servicesAbout h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .servicesAbout h1 {
+      font-size: 2rem;
+    }
+  }
+</style>

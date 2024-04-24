@@ -1,0 +1,65 @@
+---
+import design from "../../assets/images/design.jpg";
+import laws from "../../assets/images/laws.jpg";
+import ProcessItem from "./ProcessItem.astro";
+---
+
+<section class="process">
+  <h2>Understand our process</h2>
+
+  <div class="container">
+    <ProcessItem title="Collaboration and Design" image={design.src}>
+      We work closely with you to understand your unique needs, style, and
+      budget, translating your ideas into a stunning and functional design plan
+      that reflects your personality.
+    </ProcessItem>
+
+    <ProcessItem title="Permits and Approvals" image={laws.src}>
+      We navigate the complexities of legal and construction permits, ensuring
+      your project adheres to all regulations and progresses smoothly.
+    </ProcessItem>
+  </div>
+</section>
+
+<style>
+  .process {
+    text-align: left;
+    padding: 20px;
+    margin: 20px;
+    background-color: #f9f9f9;
+  }
+
+  .process h2 {
+    font-size: 2em;
+    color: #333;
+    font-family: "Gotham";
+    margin: 20px;
+    margin-left: 7%;
+    font-weight: 200;
+    margin-bottom: 50px;
+  }
+
+  .process .container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+  }
+
+  @media (max-width: 950px) {
+    .process .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .process h2 {
+      font-size: 1.5em;
+    }
+
+    .process {
+      padding: 10px;
+      margin: 10px;
+    }
+  }
+</style>

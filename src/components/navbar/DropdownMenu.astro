@@ -1,0 +1,106 @@
+---
+import { IoIosArrowDown } from "react-icons/io";
+---
+
+<script>
+  function updateDropdownPosition() {
+    const buttonRect = document
+      .querySelector(".services-drop")
+      .getBoundingClientRect();
+    const dropdown = document.querySelector(".menu") as HTMLElement;
+    dropdown.style.left = `${buttonRect.left - 33   }px`;
+  }
+
+  updateDropdownPosition();
+
+  window.addEventListener("resize", updateDropdownPosition);
+</script>
+
+<div>
+  <a href="/services" class="services-drop">
+    Services <IoIosArrowDown />
+  </a>
+  <ul class="menu">
+    <li>
+      <a href="/services?option=concrete">Concrete Repair</a>
+    </li>
+    <li>
+      <a href="/services?option=driveways">Driveways</a>
+    </li>
+    <li>
+      <a href="/services?option=sidewalks">Sidewalks</a>
+    </li>
+    <li>
+      <a href="/services?option=decks">Decks</a>
+    </li>
+  </ul>
+</div>
+
+<style>
+  .menu {
+    height: 0;
+    width: 200px;
+    background-color: var(--white);
+    top: 100% !important;
+    position: absolute;
+    z-index: 100;
+    color: black;
+    text-decoration: none;
+    list-style: none;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 0px 5px;
+    transition: height 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .menu:hover {
+    height: 150px !important;
+  }
+
+  .menu.show {
+    height: 150px;
+  }
+
+  .menu li {
+    padding: 2px 3px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    color: #545d73;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .menu li svg {
+    margin-right: 5px;
+    font-size: 18px;
+  }
+
+  .services .services-drop a{
+    color: var(--main-bg-color) !important;
+
+  }
+
+  .menu li a {
+    text-decoration: none;
+    font-size: 17px;
+    width: 100% !important;
+    color: var(--main-bg-color);
+    font-family: "lmaison";
+    transition: font-wight 0.2s ease-in-out;
+  }
+
+  .menu li a:hover {
+    font-weight: bold;
+  }
+
+  .services-drop:hover ~ .menu {
+    height: 150px !important;
+  }
+
+  a svg {
+    margin-left: 2px;
+  }
+</style>
