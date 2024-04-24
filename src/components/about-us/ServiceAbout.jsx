@@ -4,8 +4,9 @@ import BricksIcon from "../../assets/icons/bricks.icon";
 
 import "../../styles/serviceSection.css";
 
-export default function ServiceAbout({ title, children, data }) {
-  if (title) {
+export default function ServiceAbout(props) {
+  if (props) {
+    const { title, children, data } = props;
     return (
       <div className="serviceSection">
         <div className="servicesList">
