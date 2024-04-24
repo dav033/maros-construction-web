@@ -14,9 +14,6 @@ export default defineConfig({
   }),
 
   vite: {
-    build: {
-      cssMinify: "lightningcss",
-    },
     ssr: {
       noExternal: ["path-to-regexp"],
     },
