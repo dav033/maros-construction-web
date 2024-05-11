@@ -5,38 +5,63 @@ import ServicePageItem from "../components/services/ServicePageItem.astro";
 import PresentationBanner from "../components/services/PresentationBanner.astro";
 import Introduction from "../components/services/Introduction.astro";
 
-const services = [
+const concreteData = [
   {
     title: "Concrete Repair",
-    image: images.lath,
-    id: "concrete",
-    imageMedium: images.lathMedium,
+    image: images.concrete.src,
+    description:
+      "Expert restoration services for damaged concrete structures, ensuring durability and safety.",
   },
+
   {
     title: "Driveways",
-    image: images.driveway,
-    id: "driveways",
-    imageMedium: images.lathMedium,
+    image: images.driveway.src,
+    description:
+      "Installation and maintenance of durable concrete surfaces for residential or commercial vehicle access.",
   },
+
   {
     title: "Sidewalks",
-    image: images.sidewalk,
-    id: "sidewalks",
-    imageMedium: images.lathMedium,
+    image: images.sidewalk.src,
+    description:
+      "Construction and upkeep of safe pedestrian walkways made from concrete",
   },
+
   {
     title: "Decks",
-    image: images.decks,
-    id: "decks",
-    imageMedium: images.lathMedium,
+    image: images.decks.src,
+    description:
+      "Custom construction of stylish outdoor living spaces using durable concrete materials.",
   },
 ];
 
-const serviceDescription = `Enhance the beauty and ambiance of your spaces with our expert
-painting services. Whether you require interior or exterior painting,
-our team will provide meticulous attention to detail, ensuring a
-flawless and long-lasting finish. We work closely with our clients to
-understand their preferences and deliver personalized results`;
+const remoelationData = [
+  {
+    title: "Kitchen Renovation",
+    description:
+      "Elevate your kitchen with expert craftsmanship and contemporary design.",
+    image: images.kitchen.src,
+  },
+
+  {
+    title: "Full Renovation",
+    description:
+      "Transform your space with comprehensive renovation solutions tailored to your preferences.",
+    image: images.frenovation.src,
+  },
+  {
+    title: "Home Additions",
+    description:
+      "Expand your living area seamlessly with expertly crafted home additions.",
+    image: images.aditions.src,
+  },
+  {
+    title: "Expansions",
+    description:
+      "Enhance your home's capacity and functionality with seamless expansion solutions.",
+    image: images.expansions.src,
+  },
+];
 ---
 
 <script>
@@ -66,17 +91,40 @@ understand their preferences and deliver personalized results`;
     <PresentationBanner />
 
     <Introduction />
-    {
-      services.map((service) => (
-        <ServicePageItem
-          title={service.title}
-          images={{ default: service.image, medium: service.imageMedium }}
-          idSection={service.id}
-        >
-          {serviceDescription}
-        </ServicePageItem>
-      ))
-    }
+
+    <div class="serviceSection">
+      <h1>Concrete Work</h1>
+      <div class="servicesContainer">
+        {
+          concreteData.map((service, index) => (
+            <ServicePageItem
+              title={service.title}
+              image={service.image}
+              key={index}
+            >
+              {service.description}
+            </ServicePageItem>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="serviceSection">
+      <h1>Full Remodeling</h1>
+      <div class="servicesContainer">
+        {
+          remoelationData.map((service, index) => (
+            <ServicePageItem
+              title={service.title}
+              image={service.image}
+              key={index}
+            >
+              {service.description}
+            </ServicePageItem>
+          ))
+        }
+      </div>
+    </div>
   </main>
 </Layout>
 
@@ -93,9 +141,47 @@ understand their preferences and deliver personalized results`;
     padding-left: 40px;
   }
 
-  @media (max-width: 1000px) {
-    .servicesPage {
-      padding: 0;
+  .serviceSection {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    width: 100%;
+    /* background-color: red; */
+  }
+
+  .serviceSection h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    font-weight: 200;
+    text-align: center;
+  }
+  .servicesContainer {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+  }
+
+  @media screen and (max-width: 1180px) {
+    .serviceSection .servicesContainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      align-items: center;
+      justify-items: center;
     }
   }
+
+  @media (max-width: 1000px) {
+    .servicesPage {
+      padding: 10px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .serviceSection .servicesContainer {
+      grid-template-columns: 1fr;
+    }
+  }
+  
 </style>

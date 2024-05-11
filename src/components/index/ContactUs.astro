@@ -58,7 +58,7 @@ import ContactForm from "./contactForm.astro";
     width: 50%;
     height: fit-content;
     padding: 20px;
-    margin-bottom: 30px
+    margin-bottom: 30px;
   }
 
   .contact div p {
@@ -68,5 +68,27 @@ import ContactForm from "./contactForm.astro";
     font-family: "Barlow";
     position: relative;
     padding: 10px 30px;
+  }
+
+  @media screen and (max-width: 950px) {
+    .contact div h2 {
+      font-size: 2em;
+    }
+
+    .contact div p {
+      font-size: 1.2em;
+    }
+  }
+
+  @media screen and (max-width: 790px) {
+    .contact div {
+      padding: 20px 0;
+    }
+  }
+
+  @media screen and (max-width: 660px) {
+    .contact div{
+      display: none
+    }
   }
 </style>

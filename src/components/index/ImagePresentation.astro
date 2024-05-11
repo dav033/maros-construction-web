@@ -40,13 +40,13 @@
       changeToImage2 18s 9s infinite,
       zoomIn 2s,
       zoomInSequence 9s 9s infinite;
+  }
 
-    &::before {
-      background-color: rgba(0, 0, 0, 0.4);
-      animation:
-        flash 1s,
-        flashSequence 9s 9s infinite;
-    }
+  .imageContent.principal::before {
+    background-color: rgba(0, 0, 0, 0.4);
+    animation:
+      flash 1s,
+      flashSequence 9s 9s infinite;
   }
 
   .imageContent.principal h3 {

@@ -25,7 +25,7 @@ const Sidebar = () => {
         <button onClick={handleMenu} className="close">
           <AiOutlineClose className="icon" />
         </button>
-        <div className="services">
+        {/* <div className="services">
           <h4>Services</h4>
 
           <a href="/services?option=concrete">Concrete Repair</a>
@@ -35,9 +35,11 @@ const Sidebar = () => {
           <a href="/services?option=sidewalks">Sidewalks</a>
 
           <a href="/services?option=decks">Decks</a>
-        </div>
-        <a href="/services">About Us</a>
-        <a href="/services">Contact Us</a>
+        </div> */}
+        <a href="/">Home</a>
+        <a href="/services">Services</a>
+        <a href="/about-us">About Us</a>
+        <a href="/contact-us">Contact Us</a>
       </div>
     </div>
   );

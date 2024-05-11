@@ -13,6 +13,18 @@
 }
 
 @font-face {
+  font-family: "Avenir";
+  src: url("../assets/fonts/AvenirNextCyr-Light.ttf");
+  font-weight: light;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../assets/fonts/AvenirNextCyr-Demi.ttf");
+  font-weight: bold;
+}
+
+@font-face {
   font-family: "Barlow";
   src: url("../assets/fonts/Barlow-Thin.ttf");
   font-weight: thin;

@@ -1,207 +1,102 @@
 ---
-let { title, images, idSection } = Astro.props;
+import images from "../../images";
+import Arrow from "../../assets/icons/arrow.icon.astro";
+const { title, image } = Astro.props;
 ---
 
-<div class="servicePageItem" id={idSection}>
-  <div class="imagesContainer">
-    <picture>
-      <source
-        media="(max-width: 1150px) and (min-width: 1081px)"
-        srcset={images.medium.src}
-      />
+<div class="serviceItem">
+  <img src={image} />
+  <h1>{title}</h1>
 
-      <source media="(max-width: 1080px) " srcset={images.default.src} />
+  <p>
+    <slot />
+  </p>
 
-      <img src={images.default.src} " alt="{title}class=" image" />
-    </picture>
-  </div>
-  <div class="body">
-    <h1>{title}</h1>
-    <p><slot /></p>
-
-    <a href={`/contact-us/?service=${idSection}`}>Order Now</a>
-  </div>
+  <a href="/contact">Order Now <Arrow class="icon" /> </a>
 </div>
 
 <style>
-  .servicePageItem {
-    width: 100%;
-    margin-top: 20px;
+  .serviceItem {
     display: flex;
-    flex-direction: row;
-    padding: 60px 40px;
-    padding-right: 0px;
-    padding-left: 0px;
-    align-items: flex-start;
-    /* background-color: red; */
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    max-width: 320px;
   }
 
-  .body {
+  .serviceItem h1 {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Avenir";
+    margin-bottom: 14px;
+    margin-top: 14px;
+    text-align: left;
     width: 100%;
-    padding: 0px 100px;
   }
 
-  .body h1 {
-    font-size: 45px;
-    font-weight: 800;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-    font-family: "Gotham", sans-serif;
-  }
-
-  .body p {
-    font-size: 17px;
-    font-weight: 300;
-    line-height: 36px;
-    letter-spacing: 0.02rem;
-    margin-bottom: 20px;
-    font-family: "Gotham", sans-serif;
-  }
-
-  .body a {
-    border: 1.6px solid #80b500;
+  .serviceItem p {
+    width: 100%;
+    text-align: center;
+    text-align: left;
     font-size: 16px;
-    background-color: transparent;
-    color: #80b500;
-    padding: 15px 25px;
-    border-radius: 5px;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-weight: normal;
-    letter-spacing: 0.05rem;
-    transition: all 0.3s ease-in-out;
-    font-family: "Gotham", sans-serif;
+    font-weight: 300;
+    line-height: 2;
+    font-family: "Avenir";
+    min-height: 100px;
+  }
+
+  .serviceItem img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: right;
+    margin-bottom: 15px;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), 0 100%);
+  }
+
+  .serviceItem a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Avenir";
     text-decoration: none;
+    text-align: left;
   }
 
-  .body a:hover {
-    color: #005338;
-    border-color: #005338;
+  .serviceItem a .icon {
+    margin-left: 5px;
+    color: var(--main-color);
   }
 
-  .servicePageItem:nth-child(odd) {
-    flex-direction: row-reverse;
-  }
-
-  .servicePageItem:nth-child(odd) .imagesContainer img {
-    float: right;
-  }
-
-  .imagesContainer img {
-    margin: 0;
-  }
-
-  @media (max-width: 1478px) and (min-width: 1080px) {
-    .servicePageItem .body {
-      width: 50%;
-      padding: 0px 60px;
-      margin-left: 20px;
+  @media screen and (max-width: 1340px) {
+    .serviceItem {
+      max-width: 280px;
     }
   }
 
-  @media (max-width: 1220px) and (min-width: 1080px) {
-    .servicePageItem .body {
-      padding: 0px 40px;
+  @media screen and (max-width: 1180px) {
+    .serviceItem {
+      max-width: 320px;
     }
   }
 
-  @media (max-width: 1165px) and (min-width: 1080px) {
-    .servicePageItem .imagesContainer .image1 {
-      left: 17.1%;
-      width: 480px;
-      height: 250px;
+  @media screen and (max-width: 700px) {
+    .serviceItem {
+      max-width: 280px;
     }
 
-    .servicePageItem .body {
-      padding: 0px 40px;
-    }
-
-    .servicePageItem .body h1 {
-      font-size: 40px;
+    .serviceItem p {
+      min-height: 130px;
     }
   }
 
-  @media (max-width: 1080px) {
-    .servicePageItem {
-      flex-direction: column;
-      padding: 0;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 40px;
-    }
-
-    .servicePageItem:nth-child(odd) {
-      flex-direction: column;
-    }
-
-    .servicePageItem .imagesContainer {
-      margin-bottom: 50px;
-    }
-
-    .servicePageItem .body {
-      padding: 0px 20px;
-      width: 100%;
-    }
-  }
-
-  @media (max-width: 905px) {
-    .servicePageItem {
-      width: 100% !important;
-    }
-
-    .servicePageItem.multiple {
-      margin-bottom: 0px;
-    }
-
-    .servicePageItem .body {
-      padding: 0px 20px !important;
-    }
-
-    .servicePageItem .imagesContainer {
-      /* margin-bottom: 100px !important; */
-      width: 100%;
-    }
-
-    .servicePageItem .imagesContainer img {
-      width: 100% !important;
-    }
-
-    .servicePageItem .imagesContainer .image1 {
-      display: none;
-    }
-  }
-
-  @media (max-width: 950px) {
-    .servicePageItem {
-      padding: 0px 20px ;
-    }
-    .servicePageItem .body h1 {
-      font-size: 35px;
-    }
-
-    .servicePageItem .body p {
-      font-size: 14px;
-    }
-  }
-
-  @media (max-width: 400px) {
-    .servicePageItem .imagesContainer {
-      margin-bottom: 30px !important;
-    }
-
-    .servicePageItem .body h1 {
-      font-size: 25px;
-    }
-
-    .servicePageItem .body a {
-      font-size: 14px;
-      padding: 12px 23px;
-    }
-  }
-
-  @media (max-width: 300px) {
-    .servicePageItem .body h1 {
-      font-size: 20px;
+  @media screen and (max-width: 500px) {
+    .serviceItem {
+      max-width: 320px;
     }
   }
 </style>

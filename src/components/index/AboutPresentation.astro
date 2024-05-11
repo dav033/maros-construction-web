@@ -13,7 +13,7 @@ import image from "../../assets/images/xviiizz-Vgv6OOwkTqc-unsplash.jpg";
         reliable team for all your concrete projects and full remodeling.
       </p>
 
-      <a href = "/about-us"> Learn more </a>
+      <a href="/about-us"> Learn more </a>
     </div>
   </div>
 
@@ -92,7 +92,6 @@ import image from "../../assets/images/xviiizz-Vgv6OOwkTqc-unsplash.jpg";
     cursor: pointer;
     text-decoration: none;
     transition: background-color 0.3s;
-
   }
 
   .aboutPresentation span {
@@ -140,5 +139,69 @@ import image from "../../assets/images/xviiizz-Vgv6OOwkTqc-unsplash.jpg";
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  @media screen and (max-width: 1300px) {
+    .aboutPresentation .main {
+      padding: 0 5%;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .aboutPresentation .main {
+      padding: 0;
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    .aboutPresentation {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .aboutPresentation .image {
+      width: 300px;
+      height: 300px;
+      margin: 0 auto;
+      margin-bottom: 20px
+    }
+
+    .aboutPresentation .image::before {
+      content: none;
+    }
+
+    .aboutPresentation .main {
+      padding: 0;
+      width: 100%;
+    }
+
+    .aboutPresentation .main div {
+      width: 100%;
+      padding: 0 10%;
+    }
+  }
+
+  @media screen and (max-width:500px) {
+    .aboutPresentation .main h2 {
+      font-size: 24px;
+    }
+
+    .aboutPresentation .main p {
+      font-size: 14px;
+    }
+
+    .aboutPresentation a {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+
+    .aboutPresentation span {
+      font-size: 12px;
+    }
+
+    .aboutPresentation span:before {
+      width: 30px;
+    }
   }
 </style>

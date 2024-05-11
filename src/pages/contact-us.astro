@@ -1,0 +1,192 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <div class="contact-us">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <div class="body">
+        <form>
+          <input type="text" placeholder="Name" />
+          <input type="email" placeholder="Email" />
+          <input type="text" placeholder="Service" />
+          <textarea placeholder="Message"></textarea>
+          <button>Send</button>
+        </form>
+
+        <div class="information">
+          <div>
+            <span>Miami, Florida</span>
+          </div>
+
+          <div>
+            <span>(786) 707-0815</span>
+          </div>
+
+          <div>
+            <span>info@marosconstruction.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .contact-us {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("../assets/images/sandy-millar-u1kg_wztnkg-unsplash.jpg");
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .contact-us::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+  }
+  .contact-us .container {
+    position: relative;
+    z-index: 1000;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+  }
+  .contact-us .container h1 {
+    margin-bottom: 20px;
+  }
+  .contact-us .container .body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 30px;
+  }
+  .contact-us .container form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+  }
+  .contact-us .container form input,
+  .contact-us .container form textarea {
+    outline: none;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    border-radius: 7px;
+    border: 1px solid black;
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+    font-size: 16px;
+  }
+  .contact-us .container form input:focus,
+  .contact-us .container form textarea:focus {
+    border: 1px solid #ff6b6b;
+  }
+  .contact-us .container form button {
+    padding: 8px 0px;
+    border: none;
+    background-color: #ff6b6b;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .contact-us .container form button:hover {
+    background-color: #fe5c5c;
+  }
+  .contact-us .container form textarea {
+    height: 150px;
+    resize: none;
+    max-width: 100%;
+  }
+  .contact-us .container .information {
+    display: flex;
+    flex-direction: column;
+    padding-left: 60px;
+  }
+  .contact-us .container .information div {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+  }
+  .contact-us .container .information div .icon {
+    margin-right: 30px;
+    font-size: 24px;
+    color: #7c7c7c;
+  }
+  .contact-us .container .information div span {
+    font-size: 18px;
+    font-weight: 100;
+  }
+  @media (max-width: 900px) {
+    .contact-us .container {
+      width: 90%;
+    }
+    .contact-us .container .body form {
+      width: 50%;
+    }
+    .contact-us .container .body .information {
+      width: 50%;
+      padding-right: 5px;
+      padding-left: 10px;
+    }
+  }
+  @media (max-width: 760px) {
+    .contact-us {
+      height: auto;
+      padding: 20px;
+      padding-top: 100px;
+    }
+    .contact-us .container .body {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .contact-us .container .body form {
+      width: 100%;
+    }
+    .contact-us .container .body .information {
+      width: 100%;
+      padding: 0;
+      padding-top: 20px;
+    }
+  }
+  @media (max-width: 450px) {
+    .contact-us {
+      padding: 10px;
+        padding-top: 100px;
+    }
+    .contact-us .container {
+      width: 100%;
+    }
+  }
+  @media (max-width: 380px) {
+    .contact-us .container .body form {
+      width: 100%;
+    }
+    .contact-us .container .body .information {
+      width: 100%;
+      padding: 0;
+      padding-top: 20px;
+    }
+    .contact-us .container .body .information div span {
+      font-size: 16px;
+      word-break: break-all;
+    }
+    .contact-us .container .body .information div .icon {
+      margin-right: 10px;
+    }
+  }
+</style>
