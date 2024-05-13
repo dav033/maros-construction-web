@@ -1,5 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Location from "../assets/icons/location.icon.astro";
+import Phone from "../assets/icons/phone.icon.astro";
+import Mail from "../assets/icons/mail.icon.astro";
 ---
 
 <Layout>
@@ -17,14 +20,17 @@ import Layout from "../layouts/Layout.astro";
 
         <div class="information">
           <div>
+            <Location class="icon" />
             <span>Miami, Florida</span>
           </div>
 
           <div>
+            <Phone class="icon" />
             <span>(786) 707-0815</span>
           </div>
 
           <div>
+            <Mail class="icon" />
             <span>info@marosconstruction.com</span>
           </div>
         </div>
@@ -166,7 +172,7 @@ import Layout from "../layouts/Layout.astro";
   @media (max-width: 450px) {
     .contact-us {
       padding: 10px;
-        padding-top: 100px;
+      padding-top: 100px;
     }
     .contact-us .container {
       width: 100%;

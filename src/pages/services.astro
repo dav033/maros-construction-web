@@ -4,62 +4,41 @@ import images from "../images";
 import ServicePageItem from "../components/services/ServicePageItem.astro";
 import PresentationBanner from "../components/services/PresentationBanner.astro";
 import Introduction from "../components/services/Introduction.astro";
-
+import FrequentQuestions from "../components/services/FrequentQuestions";
 const concreteData = [
   {
-    title: "Concrete Repair",
+    title: "Concrete Restoration & Waterproofing",
+    image: images.waterproofing.src,
+    description:
+      "We specialize in restoring and waterproofing concrete structures. Whether it’s repairing cracks, reinforcing foundations, or applying protective coatings, we ensure longevity and resilience.",
+  },
+
+  {
+    title: "Concrete Works",
     image: images.concrete.src,
     description:
-      "Expert restoration services for damaged concrete structures, ensuring durability and safety.",
+      "Our expertise extends to all aspects of concrete construction. From pouring foundations to creating custom designs, we bring precision and creativity to every project.",
   },
 
   {
-    title: "Driveways",
+    title: "Driveways & Floors",
     image: images.driveway.src,
     description:
-      "Installation and maintenance of durable concrete surfaces for residential or commercial vehicle access.",
+      "Need a stunning driveway or durable flooring? Look no further. We craft driveways that enhance curb appeal and floors that withstand daily wear and tear.",
   },
 
   {
-    title: "Sidewalks",
-    image: images.sidewalk.src,
+    title: "Home & Apartment Renovations",
+    image: images.home.src,
     description:
-      "Construction and upkeep of safe pedestrian walkways made from concrete",
+      "Transforming living spaces is our passion. Whether it’s a cozy apartment or a spacious home, we handle renovations with care, from layout adjustments to aesthetic upgrades.",
   },
 
-  {
-    title: "Decks",
-    image: images.decks.src,
-    description:
-      "Custom construction of stylish outdoor living spaces using durable concrete materials.",
-  },
-];
-
-const remoelationData = [
-  {
-    title: "Kitchen Renovation",
-    description:
-      "Elevate your kitchen with expert craftsmanship and contemporary design.",
-    image: images.kitchen.src,
-  },
-
-  {
-    title: "Full Renovation",
-    description:
-      "Transform your space with comprehensive renovation solutions tailored to your preferences.",
-    image: images.frenovation.src,
-  },
   {
     title: "Home Additions",
+    image: images.additions.src,
     description:
-      "Expand your living area seamlessly with expertly crafted home additions.",
-    image: images.aditions.src,
-  },
-  {
-    title: "Expansions",
-    description:
-      "Enhance your home's capacity and functionality with seamless expansion solutions.",
-    image: images.expansions.src,
+      "Expanding your property? We’re here to help. Our team designs and constructs thoughtful additions, seamlessly integrating them with your existing structure.",
   },
 ];
 ---
@@ -93,7 +72,6 @@ const remoelationData = [
     <Introduction />
 
     <div class="serviceSection">
-      <h1>Concrete Work</h1>
       <div class="servicesContainer">
         {
           concreteData.map((service, index) => (
@@ -109,22 +87,7 @@ const remoelationData = [
       </div>
     </div>
 
-    <div class="serviceSection">
-      <h1>Full Remodeling</h1>
-      <div class="servicesContainer">
-        {
-          remoelationData.map((service, index) => (
-            <ServicePageItem
-              title={service.title}
-              image={service.image}
-              key={index}
-            >
-              {service.description}
-            </ServicePageItem>
-          ))
-        }
-      </div>
-    </div>
+    <FrequentQuestions client:load />
   </main>
 </Layout>
 
@@ -156,8 +119,10 @@ const remoelationData = [
     text-align: center;
   }
   .servicesContainer {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-between;
+    justify-items: center;
 
     width: 100%;
   }
@@ -178,10 +143,9 @@ const remoelationData = [
     }
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 530px) {
     .serviceSection .servicesContainer {
       grid-template-columns: 1fr;
     }
   }
-  
 </style>

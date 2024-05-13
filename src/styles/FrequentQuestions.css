@@ -1,0 +1,15 @@
+.frequentQuestions {
+    width: 100%;
+}
+
+.frequentQuestions .title {
+    font-size: 40px;
+    font-family: "lmaison";
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .frequentQuestions .title {
+        font-size: 24px;
+    }
+}
