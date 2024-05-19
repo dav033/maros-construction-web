@@ -59,7 +59,7 @@
     }
 
     .questionItem {
-        height: 50px;
+        height: 55px;
     }
 
     .questionItem.open {
@@ -72,7 +72,7 @@
 @media screen and (max-width:400px) {
 
     .questionItem .question {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .questionItem {
