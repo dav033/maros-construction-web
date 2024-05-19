@@ -1,7 +1,5 @@
 ---
 import images from "../../images";
-
-const { image } = Astro.props;
 ---
 
 <section>
@@ -62,13 +60,11 @@ const { image } = Astro.props;
   .mision {
     display: flex;
     color: var(--white);
-    /* background-color: red; */
     box-sizing: content-box;
   }
 
   .mision:nth-child(2n) {
     flex-direction: row-reverse;
-    /* background-color: blue; */
   }
 
   .mision .container:nth-child(2n) {
@@ -85,7 +81,6 @@ const { image } = Astro.props;
 
   .container ul {
     list-style-type: none;
-    /* background-color: red; */
     margin: 30px 2%;
     width: 100%;
     max-height: 100%;
@@ -94,7 +89,6 @@ const { image } = Astro.props;
   .mision ul li {
     font-size: 18px;
     text-align: left;
-    /* margin: 20px 10%; */
     line-height: 1.75;
     font-weight: 200;
     font-family: "Gotham";

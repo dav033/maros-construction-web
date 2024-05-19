@@ -1,6 +1,5 @@
 .questionItem {
     width: 100% !important;
-    /* background-color: blue; */
     margin-bottom: 20px;
     padding: 10px;
     border-bottom: 2px solid var(--main-bg-color);
@@ -12,14 +11,11 @@
 
 .questionItem div .icon {
     margin-bottom: 5px;
-    /* font-size: 40px; */
     transition: all .15s ease-in;
 }
 
 
 .questionItem div .icon.open {
-
-    /* rotar */
     transform: rotate(180deg);
 }
 
@@ -44,12 +40,12 @@
 
 
 @media screen and (max-width: 1000px) {
- 
+
     .questionItem {
         padding: 0;
     }
 
-    
+
 
 }
 

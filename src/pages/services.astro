@@ -1,70 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import images from "../images";
 import ServicePageItem from "../components/services/ServicePageItem.astro";
 import PresentationBanner from "../components/services/PresentationBanner.astro";
 import Introduction from "../components/services/Introduction.astro";
 import FrequentQuestions from "../components/services/FrequentQuestions";
-const concreteData = [
-  {
-    title: "Concrete Restoration & Waterproofing",
-    image: images.waterproofing.src,
-    description:
-      "We specialize in restoring and waterproofing concrete structures. Whether it’s repairing cracks, reinforcing foundations, or applying protective coatings, we ensure longevity and resilience.",
-  },
-
-  {
-    title: "Concrete Works",
-    image: images.concrete.src,
-    description:
-      "Our expertise extends to all aspects of concrete construction. From pouring foundations to creating custom designs, we bring precision and creativity to every project.",
-  },
-
-  {
-    title: "Driveways & Floors",
-    image: images.driveway.src,
-    description:
-      "Need a stunning driveway or durable flooring? Look no further. We craft driveways that enhance curb appeal and floors that withstand daily wear and tear.",
-  },
-
-  {
-    title: "Home & Apartment Renovations",
-    image: images.home.src,
-    description:
-      "Transforming living spaces is our passion. Whether it’s a cozy apartment or a spacious home, we handle renovations with care, from layout adjustments to aesthetic upgrades.",
-  },
-
-  {
-    title: "Home Additions",
-    image: images.additions.src,
-    description:
-      "Expanding your property? We’re here to help. Our team designs and constructs thoughtful additions, seamlessly integrating them with your existing structure.",
-  },
-];
+import staticData from "../static";
 ---
 
-<script>
-  function scrollToSection(sectionId) {
-    var section = document.getElementById(sectionId);
-    if (sectionId && section) {
-      window.scrollTo({
-        top: section.offsetTop - 100,
-        behavior: "smooth",
-      });
-    }
-  }
-
-  const initialize = () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const option = urlParams.get("option");
-
-    if (option) {
-      scrollToSection(option);
-    }
-  };
-
-  initialize();
-</script>
 <Layout>
   <main class="servicesPage">
     <PresentationBanner />
@@ -74,7 +16,7 @@ const concreteData = [
     <div class="serviceSection">
       <div class="servicesContainer">
         {
-          concreteData.map((service, index) => (
+          staticData.concreteData.map((service, index) => (
             <ServicePageItem
               title={service.title}
               image={service.image}

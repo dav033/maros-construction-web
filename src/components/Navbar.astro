@@ -14,9 +14,7 @@ import MobileLogo from "./index/MobileLogo.astro";
     page = window.location.pathname;
     page = page.substring(page.lastIndexOf("/") + 1);
     let navbar = document.querySelector(".navbar-v2");
-    navbar.classList.add(page);
-    console.log(page);
-    
+    navbar.classList.add(page);    
   }
 
   updatePage();

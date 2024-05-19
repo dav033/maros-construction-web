@@ -5,7 +5,6 @@ const { image, rating, username, date } = Astro.props;
 <div class="opinion">
     <img src={image} />
 
-    <!-- rendericar estrellas por cantidad de rating del 1 al 5 -->
     <div>
         {Array.from({ length: rating }).map((_, index) => <span>★</span>)}
     </div>
@@ -53,7 +52,6 @@ const { image, rating, username, date } = Astro.props;
         line-height: 1.5;
         padding: 10px 18px;
         font-size: 1em;
-        /* background-color: red; */
     }
 
     @media screen and (max-width: 1250px) {
@@ -62,13 +60,9 @@ const { image, rating, username, date } = Astro.props;
         }
     }
 
-
     @media screen and (max-width: 550px) {
         .opinion {
             width: 100%;
         }
     }
-
-
-
 </style>
