@@ -1,19 +1,26 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import "../../styles/sidebar.css";
 import { CiMenuBurger } from "react-icons/ci";
 import { AiOutlineClose } from "react-icons/ai";
+import classNames from "classnames";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleMenu = () => {
-    setIsOpen(!isOpen);
-    if (!isOpen) {
+  const handleMenu = useCallback(() => {
+    setIsOpen((prevIsOpen) => !prevIsOpen);
+  }, []);
+
+  useEffect(() => {
+    if (isOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "unset";
     }
-  };
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
 
   return (
     <div className="sidebarContainer">
@@ -21,7 +28,7 @@ const Sidebar = () => {
         <CiMenuBurger className="icon" />
       </button>
 
-      <div className={`sidebar ${isOpen ? "open" : ""}`}>
+      <div className={classNames("sidebar", { open: isOpen })}>
         <button onClick={handleMenu} className="close">
           <AiOutlineClose className="icon" />
         </button>
