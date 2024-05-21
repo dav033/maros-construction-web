@@ -1,9 +1,11 @@
 ---
+import { Image } from "astro:assets";
+
 const { image, rating, username, date } = Astro.props;
 ---
 
 <div class="opinion">
-  <img src={image} alt="Opinion" width={36} height={36} />
+  <Image src={image} alt="Opinion" width={36} height={36} />
 
   <div>
     {Array.from({ length: rating }).map((_, index) => <span>★</span>)}
