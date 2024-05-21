@@ -4,7 +4,7 @@ import Image from "astro/components/Image.astro";
 ---
 
 <div class="opinion">
-  <Image src={image} alt="Opinion" width={36} height={36} />
+  <img src={image} alt="Opinion" width={36} height={36} />
 
   <div>
     {Array.from({ length: rating }).map((_, index) => <span>★</span>)}
