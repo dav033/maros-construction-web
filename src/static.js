@@ -107,6 +107,7 @@ const opinions = [
 const staticData = {
   concreteData,
   generalQuestions,
+  opinions,
 };
 
 export default staticData;
