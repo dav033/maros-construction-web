@@ -8,11 +8,11 @@ export default function QuestionItem(props) {
     return (
         <div onClick={onClick} className={isOpen ? "questionItem open" : "questionItem"}>
             <div>
-                <h1 class="question">
+                <h1 className="question">
                     {question.question}
                 </h1>
 
-                <Arrow class={isOpen ? "icon open" : "icon"} />
+                <Arrow className={isOpen ? "icon open" : "icon"} />
             </div>
 
             {isOpen && (
