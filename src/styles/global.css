@@ -1,9 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-
 @font-face {
   font-family: "Barlow";
   src: url("../assets/fonts/Barlow-Regular.ttf");
   font-weight: 500;
+}
+
+@font-face {
+  font-family: "Hind Siliguri";
+  src: url("../assets/fonts/HindSiliguri-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../assets/fonts/OpenSans-Regular.ttf");
 }
 
 @font-face {

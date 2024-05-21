@@ -7,8 +7,6 @@
 </div>
 
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@600&display=swap");
-
   .imageContent {
     position: relative;
   }
@@ -35,7 +33,7 @@
     background-repeat: no-repeat;
     animation:
       changeToImage1 18s infinite,
-      changeToImage2 18s 9s infinite
+      changeToImage2 18s 9s infinite;
   }
 
   .imageContent.principal::before {
@@ -51,7 +49,6 @@
     z-index: 100;
     font-family: "Hind Siliguri", sans-serif;
     font-size: 4rem;
-    font-weight: bold;
   }
 
   .imageContent.principal h3 span {
@@ -153,9 +150,8 @@
   }
 
   @media (max-width: 400px) {
-
-    .imageContent.principal{
-      padding: 10px
+    .imageContent.principal {
+      padding: 10px;
     }
     .mainPage .imageContent.principal h3 {
       font-size: 1.5rem;
