@@ -2,106 +2,125 @@
   font-family: "Barlow";
   src: url("../assets/fonts/Barlow-Regular.ttf");
   font-weight: 500;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Hind Siliguri";
   src: url("../assets/fonts/HindSiliguri-SemiBold.ttf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Open Sans";
   src: url("../assets/fonts/OpenSans-Regular.ttf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Barlow";
   src: url("../assets/fonts/Barlow-Light.ttf");
   font-weight: light;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Avenir";
   src: url("../assets/fonts/AvenirNextCyr-Light.ttf");
   font-weight: light;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Avenir";
   src: url("../assets/fonts/AvenirNextCyr-Demi.ttf");
   font-weight: bold;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Barlow";
   src: url("../assets/fonts/Barlow-Thin.ttf");
   font-weight: thin;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Gotham";
   src: url("../assets/fonts/gotham-medium.woff2") format("woff2");
   font-weight: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Gotham";
   src: url("../assets/fonts/Gotham-Light.otf");
   font-weight: 200;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Gotham";
   src: url("../assets/fonts/Gotham-Thin.otf");
   font-weight: 100;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Gotham";
   src: url("../assets/fonts/gotham-black.woff2") format("woff2");
   font-weight: bold;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Gotham";
   src: url("../assets/fonts/gotham-book.woff2") format("woff2");
   font-weight: 300;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Roboto";
   src: url("../assets/fonts/roboto-cyrillic-400-italic.ttf") format("ttf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Roboto";
   src: url("../assets/fonts/Roboto-Light.ttf") format("ttf");
   font-weight: 300;
+  font-display: swap;
 }
 @font-face {
   font-family: "RRoboto";
   src: url("../assets/fonts/Roboto-Thin.ttf") format("ttf");
   font-weight: 100;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "maison";
   src: url("../assets/fonts/MaisonNeueExtended-Demi.otf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "lmaison";
   src: url("../assets/fonts/MaisonNeueExtended-Light.otf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Squada One";
   src: url("../assets/fonts/SquadaOne-Regular.ttf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Squada two";
   src: url("../assets/fonts/montserrat-latin-700-normal.ttf");
+  font-display: swap;
 }
 
 * {
@@ -109,7 +128,6 @@
   padding: 0;
   margin: 0;
   font-family: "Open Sans", sans-serif;
-  font-display: swap;
 }
 
 :root {
