@@ -1,13 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ImagePresentation from "../components/index/ImagePresentation.astro";
-import ExampleVideo from "../components/index/ExampleVideo.astro";
 import Videos from "../components/index/Videos.astro";
 import ContactUs from "../components/index/ContactUs.astro";
-
 import "../styles/global.css";
 import AboutPresentation from "../components/index/AboutPresentation.astro";
-import Opinion from "../components/index/Opinion.astro";
+import Opinions from "../components/index/Opinions.astro";
 ---
 
 <Layout>
@@ -21,41 +19,7 @@ import Opinion from "../components/index/Opinion.astro";
 
       <ContactUs />
 
-      <section class="opinions">
-        <Opinion
-          rating={5}
-          image="https://lh3.googleusercontent.com/a-/ALV-UjVWsA9x0kVsG6wTdod5CY93YxN9Q4XNrF5wPqz-mMfIYNev-Svh=w36-h36-p-rp-mo-br100"
-          username="Javier Guzman"
-          date="6/05/2024"
-        >
-          "Maros Construction exceeded my expectations with their outstanding
-          concrete work. Their attention to detail and precision craftsmanship
-          transformed my project into a masterpiece. I highly recommend Maros
-          Construction for anyone seeking top-notch concrete services."
-        </Opinion>
-
-        <Opinion
-          rating={5}
-          image="https://lh3.googleusercontent.com/a-/ALV-UjUcAuKTJ28h1d5g7VEoV5IPbnujY-LZdqxbuMjhXYDFJyyPayc=w36-h36-p-rp-mo-br100"
-          username="Ritchard Nuccio"
-          date="6/05/2024"
-        >
-          "I recently had the pleasure of working with Maros Construction on a
-          home renovation project, and I couldn't be more impressed with the
-          results. From start to finish, their team demonstrated an unparalleled
-          level of craftsmanship and professionalism that truly sets them apart
-          in the industry."
-        </Opinion>
-
-        <Opinion
-          rating={5}
-          image="https://lh3.googleusercontent.com/a/ACg8ocIhyj9pfOY_t23snqeN9Vgy0tbN3OUnQ8qWx02WJTpyvD7gQg=w36-h36-p-rp-mo-br100"
-          username="Sata Gusty"
-          date="6/05/2024"
-        >
-          
-        </Opinion>
-      </section>
+      <Opinions />
     </div>
   </main>
 
@@ -63,23 +27,5 @@ import Opinion from "../components/index/Opinion.astro";
     .mainPage {
       transition: height 2s ease-in-out;
     }
-
-    .mainPage .opinions {
-      margin-top: 2rem;
-      padding: 1rem;
-      display: flex;
-      justify-content: space-around;
-    }
-
-   
-    @media screen and (max-width: 1050px){
-      .mainPage .opinions {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
   </style>
-
-
-
 </Layout>

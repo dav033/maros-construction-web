@@ -1,0 +1,40 @@
+---
+import Opinion from "./Opinion.astro";
+import staticData from "../../static"
+---
+
+<section class="opinions">
+  {
+    staticData.opinions.map((opinion) => (
+      <Opinion {...opinion}>{opinion.text && <p>{opinion.text}</p>}</Opinion>
+    ))
+  }
+</section>
+
+<style>
+  .opinions {
+    margin-top: 2rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .opinions > * {
+    flex: 1 1 calc(33% - 2rem);
+    margin: 1rem;
+  }
+
+  @media screen and (max-width: 1050px) {
+    .opinions {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .opinions > * {
+      flex: none;
+      width: 100%;
+      max-width: 600px;
+    }
+  }
+</style>
