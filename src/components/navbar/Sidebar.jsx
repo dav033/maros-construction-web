@@ -29,7 +29,7 @@ const Sidebar = () => {
       </button>
 
       <div className={classNames("sidebar", { open: isOpen })}>
-        <button onClick={handleMenu} className="close">
+        <button onClick={handleMenu} className="close" aria-label="Close Menu">
           <AiOutlineClose className="icon" />
         </button>
         <a href="/">Home</a>
