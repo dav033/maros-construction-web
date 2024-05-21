@@ -1,6 +1,5 @@
 ---
 const { image, rating, username, date } = Astro.props;
-import Image from "astro/components/Image.astro";
 ---
 
 <div class="opinion">
@@ -13,7 +12,7 @@ import Image from "astro/components/Image.astro";
   <p><slot /></p>
 
   <a
-    href="https://www.google.com.co/maps/place/Maros+Construction/@25.9883759,-80.4482804,9z/data=!3m1!4b1!4m6!3m5!1s0x691fa2b3593a81:0xdd0f387040f5ff0e!8m2!3d25.9883759!4d-80.4482804!16s%2Fg%2F11l737smp1?authuser=0&hl=es-419&entry=ttu"
+    href="https://www.google.com/maps/place/Maros+Construction/@25.9883759,-80.4482804,9z/data=!3m1!4b1!4m6!3m5!1s0x691fa2b3593a81:0xdd0f387040f5ff0e!8m2!3d25.9883759!4d-80.4482804!16s%2Fg%2F11l737smp1?authuser=0&hl=es-419&entry=ttu"
     target="_blank">{username}</a
   >
 </div>

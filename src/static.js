@@ -81,7 +81,7 @@ const opinions = [
   {
     rating: 5,
     image:
-      "https://lh3.googleusercontent.com/a-/ALV-UjVWsA9x0kVsG6wTdod5CY93YxN9Q4XNrF5wPqz-mMfIYNev-Svh=w36-h36-p-rp-mo-br100",
+      "https://lh3.googleusercontent.com/a-/ALV-UjVWsA9x0kVsG6wTdod5CY93YxN9Q4XNrF5wPqz-mMfIYNev-Svh=w36-h36-p-rp-mo-br100/image.png",
     username: "Javier Guzman",
     date: "6/05/2024",
     text: "Maros Construction exceeded my expectations with their outstanding concrete work. Their attention to detail and precision craftsmanship transformed my project into a masterpiece. I highly recommend Maros Construction for anyone seeking top-notch concrete services.",
@@ -89,7 +89,7 @@ const opinions = [
   {
     rating: 5,
     image:
-      "https://lh3.googleusercontent.com/a-/ALV-UjUcAuKTJ28h1d5g7VEoV5IPbnujY-LZdqxbuMjhXYDFJyyPayc=w36-h36-p-rp-mo-br100",
+      "https://lh3.googleusercontent.com/a-/ALV-UjUcAuKTJ28h1d5g7VEoV5IPbnujY-LZdqxbuMjhXYDFJyyPayc=w36-h36-p-rp-mo-br100/image.png",
     username: "Ritchard Nuccio",
     date: "6/05/2024",
     text: "I recently had the pleasure of working with Maros Construction on a home renovation project, and I couldn't be more impressed with the results. From start to finish, their team demonstrated an unparalleled level of craftsmanship and professionalism that truly sets them apart in the industry.",
@@ -97,7 +97,7 @@ const opinions = [
   {
     rating: 5,
     image:
-      "https://lh3.googleusercontent.com/a/ACg8ocIhyj9pfOY_t23snqeN9Vgy0tbN3OUnQ8qWx02WJTpyvD7gQg=w36-h36-p-rp-mo-br100",
+      "https://lh3.googleusercontent.com/a/ACg8ocIhyj9pfOY_t23snqeN9Vgy0tbN3OUnQ8qWx02WJTpyvD7gQg=w36-h36-p-rp-mo-br100/image.png",
     username: "Sata Gusty",
     date: "6/05/2024",
     text: "",
