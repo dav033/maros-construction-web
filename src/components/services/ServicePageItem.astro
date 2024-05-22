@@ -1,12 +1,17 @@
 ---
-import images from "../../images";
 import Arrow from "../../assets/icons/arrow.icon.astro";
-const { title, image } = Astro.props;
+const { title, image, index } = Astro.props;
 import Image from "astro/components/Image.astro";
 ---
 
 <div class="serviceItem">
-  <Image src={image} alt={title} width={380} height={400} />
+  <Image
+    src={image}
+    alt={title}
+    width={380}
+    height={400}
+    loading={index < 2 ? "eager" : "lazy"}
+  />
   <h1>{title}</h1>
 
   <p>
