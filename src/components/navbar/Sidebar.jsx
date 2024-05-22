@@ -24,7 +24,7 @@ const Sidebar = () => {
 
   return (
     <div className="sidebarContainer">
-      <button onClick={handleMenu} className="hamburger">
+      <button onClick={handleMenu} className="hamburger" aria-label="Sidebar Menu">
         <CiMenuBurger className="icon" />
       </button>
 
