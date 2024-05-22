@@ -3,35 +3,35 @@ import images from "./images";
 const concreteData = [
   {
     title: "Concrete Restoration & Waterproofing",
-    image: images.waterproofing.src,
+    image: images.waterproofing,
     description:
       "We specialize in restoring and waterproofing concrete structures. Whether it’s repairing cracks, reinforcing foundations, or applying protective coatings, we ensure longevity and resilience.",
   },
 
   {
     title: "Concrete Works",
-    image: images.concrete.src,
+    image: images.concrete,
     description:
       "Our expertise extends to all aspects of concrete construction. From pouring foundations to creating custom designs, we bring precision and creativity to every project.",
   },
 
   {
     title: "Driveways & Floors",
-    image: images.driveway.src,
+    image: images.driveway,
     description:
       "Need a stunning driveway or durable flooring? Look no further. We craft driveways that enhance curb appeal and floors that withstand daily wear and tear.",
   },
 
   {
     title: "Home & Apartment Renovations",
-    image: images.home.src,
+    image: images.home,
     description:
       "Transforming living spaces is our passion. Whether it’s a cozy apartment or a spacious home, we handle renovations with care, from layout adjustments to aesthetic upgrades.",
   },
 
   {
     title: "Home Additions",
-    image: images.additions.src,
+    image: images.additions,
     description:
       "Expanding your property? We’re here to help. Our team designs and constructs thoughtful additions, seamlessly integrating them with your existing structure.",
   },

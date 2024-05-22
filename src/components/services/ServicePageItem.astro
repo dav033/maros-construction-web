@@ -2,10 +2,11 @@
 import images from "../../images";
 import Arrow from "../../assets/icons/arrow.icon.astro";
 const { title, image } = Astro.props;
+import Image from "astro/components/Image.astro";
 ---
 
 <div class="serviceItem">
-  <img src={image} />
+  <Image src={image} alt={title} width={380} height={400} />
   <h1>{title}</h1>
 
   <p>
