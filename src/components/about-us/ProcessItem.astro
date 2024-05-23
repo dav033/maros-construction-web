@@ -1,10 +1,12 @@
 ---
+import Image from "astro/components/Image.astro";
+
 let { image, title } = Astro.props;
 ---
 
 <div class="process-item">
   <div class="image">
-    <img src={image} alt="Design" />
+    <Image src={image} alt={title} />
   </div>
   <h3>{title}</h3>
   <p>
