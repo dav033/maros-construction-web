@@ -3,11 +3,13 @@ import { Image } from "astro:assets";
 import image1 from "../../assets/images/imagePresentation1.webp";
 import image2 from "../../assets/images/ImagePresentation2.webp";
 import image1Medium from "../../assets/images/imagePresentation1-medium.webp";
+import image1Small from "../../assets/images/imagePresentation1-small.webp";
 ---
 
 <div class={`imageContent principal`}>
   <picture>
     <source srcset={image1Medium.src} media="(max-width: 1050px)" type="image/webp" />
+    <source srcset={image1Small.src} media="(max-width: 500px)" type="image/webp" />
 
     <Image
       src={image1}
