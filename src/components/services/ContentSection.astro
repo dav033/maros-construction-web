@@ -1,0 +1,62 @@
+---
+import ServicePageItem from "./ServicePageItem.astro";
+import staticData from "../../static";
+---
+
+<div class="serviceSection">
+  <div class="servicesContainer">
+    {
+      staticData.concreteData.map((service, index) => (
+        <ServicePageItem
+          title={service.title}
+          image={service.image}
+          key={index}
+          index={index}
+        >
+          {service.description}
+        </ServicePageItem>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .serviceSection {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    width: 100%;
+    /* background-color: red; */
+  }
+
+  .serviceSection h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    font-weight: 200;
+    text-align: center;
+  }
+  .servicesContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    justify-items: center;
+
+    width: 100%;
+  }
+
+  @media screen and (max-width: 1180px) {
+    .serviceSection .servicesContainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      align-items: center;
+      justify-items: center;
+    }
+  }
+
+  @media screen and (max-width: 530px) {
+    .serviceSection .servicesContainer {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

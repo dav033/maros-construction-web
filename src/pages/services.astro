@@ -1,10 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import ServicePageItem from "../components/services/ServicePageItem.astro";
 import PresentationBanner from "../components/services/PresentationBanner.astro";
 import Introduction from "../components/services/Introduction.astro";
 import FrequentQuestions from "../components/services/FrequentQuestions";
-import staticData from "../static";
+import ContentSection from "../components/services/ContentSection.astro";
 ---
 
 <script>
@@ -17,22 +16,7 @@ import staticData from "../static";
 
     <Introduction />
 
-    <div class="serviceSection">
-      <div class="servicesContainer">
-        {
-          staticData.concreteData.map((service, index) => (
-            <ServicePageItem
-              title={service.title}
-              image={service.image}
-              key={index}
-              index={index}
-            >
-              {service.description}
-            </ServicePageItem>
-          ))
-        }
-      </div>
-    </div>
+    <ContentSection />
 
     <FrequentQuestions client:load />
   </main>
@@ -51,48 +35,9 @@ import staticData from "../static";
     padding-left: 40px;
   }
 
-  .serviceSection {
-    margin-top: 50px;
-    margin-bottom: 40px;
-    width: 100%;
-    /* background-color: red; */
-  }
-
-  .serviceSection h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 30px;
-    font-weight: 200;
-    text-align: center;
-  }
-  .servicesContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: space-between;
-    justify-items: center;
-
-    width: 100%;
-  }
-
-  @media screen and (max-width: 1180px) {
-    .serviceSection .servicesContainer {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      align-items: center;
-      justify-items: center;
-    }
-  }
-
   @media (max-width: 1000px) {
     .servicesPage {
       padding: 10px;
-    }
-  }
-
-  @media (max-width: 530px) {
-    .serviceSection .servicesContainer {
-      grid-template-columns: 1fr;
     }
   }
 </style>
