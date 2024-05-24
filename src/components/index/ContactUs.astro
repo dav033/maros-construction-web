@@ -37,11 +37,26 @@ import ContactForm from "./contactForm.astro";
     background-color: rgba(0, 0, 0, 0.6);
   }
 
-  .contact div h2 {
-    color: #eeeeee;
-    font-size: 2.5em;
-    text-align: center;
+  .contact div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+
+  .contact div h2,
+  .contact div p {
+    color: var(--white);
     font-family: "Barlow";
+    text-align: center;
+    z-index: 1000;
+  }
+
+  .contact div h2 {
+    font-size: 2.5em;
     position: relative;
   }
 
@@ -49,23 +64,8 @@ import ContactForm from "./contactForm.astro";
     color: var(--main-color);
   }
 
-  .contact div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: fit-content;
-    padding: 20px;
-    margin-bottom: 30px;
-  }
-
   .contact div p {
-    color: #eeeeee;
     font-size: 1.5em;
-    text-align: center;
-    font-family: "Barlow";
-    position: relative;
     padding: 10px 30px;
   }
 
@@ -86,8 +86,8 @@ import ContactForm from "./contactForm.astro";
   }
 
   @media screen and (max-width: 660px) {
-    .contact div{
-      display: none
+    .contact div {
+      display: none;
     }
   }
 </style>

@@ -39,7 +39,6 @@ import images from "../../../public/images";
     background-color: var(--main-bg-color);
     display: flex;
     justify-content: space-between;
-
     background:
       linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
       linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
@@ -57,6 +56,7 @@ import images from "../../../public/images";
       );
     background-color: #131313;
     background-size: 20px 20px;
+    background-size: 20px 20px;
   }
 
   .aboutPresentation .main {
@@ -65,28 +65,29 @@ import images from "../../../public/images";
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: var(--white);
     align-items: center;
     padding: 0 10%;
+    color: var(--white);
   }
 
   .aboutPresentation .main div {
     width: 70%;
   }
 
-  .aboutPresentation .main h2,
-  .aboutPresentation .main p {
+  .aboutPresentation h2,
+  .aboutPresentation p,
+  .aboutPresentation span {
     font-family: "Barlow";
-    font-weight: thin;
   }
 
-  .aboutPresentation .main h2 {
+  .aboutPresentation h2 {
     font-size: 32px;
     margin-bottom: 1rem;
     word-spacing: 0.3rem;
+    font-weight: 300;
   }
 
-  .aboutPresentation .main p {
+  .aboutPresentation p {
     font-size: 17px;
     margin-bottom: 2rem;
     line-height: 1.75;
@@ -104,16 +105,15 @@ import images from "../../../public/images";
     transition: background-color 0.3s;
   }
 
+  .aboutPresentation a:hover {
+    background-color: #a8042e;
+  }
+
   .aboutPresentation span {
     font-size: 14px;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.5;
-    letter-spacing: normal;
     margin-bottom: 10px;
     display: block;
     color: #eae7e2;
-    font-family: "Barlow";
   }
 
   .aboutPresentation span:before {
@@ -125,9 +125,6 @@ import images from "../../../public/images";
     opacity: 0.3;
     width: 40px;
     margin-right: 10px;
-  }
-  .aboutPresentation a:hover {
-    background-color: #a8042e;
   }
 
   .aboutPresentation .image {
@@ -173,8 +170,7 @@ import images from "../../../public/images";
     .aboutPresentation .image {
       width: 300px;
       height: 300px;
-      margin: 0 auto;
-      margin-bottom: 20px;
+      margin: 0 auto 20px;
     }
 
     .aboutPresentation .image::before {
@@ -182,7 +178,6 @@ import images from "../../../public/images";
     }
 
     .aboutPresentation .main {
-      padding: 0;
       width: 100%;
     }
 
@@ -193,11 +188,11 @@ import images from "../../../public/images";
   }
 
   @media screen and (max-width: 500px) {
-    .aboutPresentation .main h2 {
+    .aboutPresentation h2 {
       font-size: 24px;
     }
 
-    .aboutPresentation .main p {
+    .aboutPresentation p {
       font-size: 14px;
     }
 
