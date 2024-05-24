@@ -1,7 +1,7 @@
 import { useState, useCallback } from "react";
 import QuestionItem from "./QuestionItem.jsx";
 import "../../../public/styles/FrequentQuestions.css";
-import staticData from "../../static.js";
+import staticData from "../../../public/static";
 
 export default function FrequentQuestions() {
   const [openQuestionId, setOpenQuestionId] = useState(null);
