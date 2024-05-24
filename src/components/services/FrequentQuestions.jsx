@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 import QuestionItem from "./QuestionItem.jsx";
-import "../../styles/FrequentQuestions.css";
+import "../../../public/styles/FrequentQuestions.css";
 import staticData from "../../static.js";
 
 export default function FrequentQuestions() {

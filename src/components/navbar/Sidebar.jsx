@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import "../../styles/sidebar.css";
+import "../../../public/styles/sidebar.css";
 import { CiMenuBurger } from "react-icons/ci";
 import { AiOutlineClose } from "react-icons/ai";
 import classNames from "classnames";
