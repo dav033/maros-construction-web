@@ -6,7 +6,7 @@ import staticData from "../../static";
 <section class="opinions">
   {
     staticData.opinions.map((opinion) => (
-      <Opinion {...opinion}>{opinion.text && <p>{opinion.text}</p>}</Opinion>
+      <Opinion {...opinion}>{opinion.text && opinion.text}</Opinion>
     ))
   }
 </section>

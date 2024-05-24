@@ -1,81 +1,74 @@
 .questionItem {
-    width: 100% !important;
-    margin-bottom: 20px;
-    padding: 10px;
-    border-bottom: 2px solid var(--main-bg-color);
-    color: var(--main-bg-color);
-    transition: all .15s ease-in;
-    height: 60px;
-    cursor: pointer;
+  width: 100% !important;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 2px solid var(--main-bg-color);
+  color: var(--main-bg-color);
+  transition: height 0.3s ease-out, padding 0.3s ease-out,
+    background-color 0.3s ease-out;
+  height: 60px;
+  cursor: pointer;
+  overflow: hidden; /* Para evitar contenido desbordante durante la animación */
 }
 
 .questionItem div .icon {
-    margin-bottom: 5px;
-    transition: all .15s ease-in;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease-out;
 }
 
-
 .questionItem div .icon.open {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .questionItem div .question {
-    font-weight: 300;
+  font-weight: 300;
 }
 
 .questionItem div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .questionItem.open {
-    height: 100px
+  height: 100px;
 }
 
 .questionItem .question {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
-
 @media screen and (max-width: 1000px) {
-
-    .questionItem {
-        padding: 0;
-    }
-
-
-
+  .questionItem {
+    padding: 0;
+  }
 }
 
 @media screen and (max-width: 550px) {
-    .questionItem .question {
-        font-size: 1.2rem;
-    }
+  .questionItem .question {
+    font-size: 1.2rem;
+  }
 
-    .questionItem {
-        height: 55px;
-    }
+  .questionItem {
+    height: 55px;
+  }
 
-    .questionItem.open {
-        height: 130px;
-    }
-
+  .questionItem.open {
+    height: 130px;
+  }
 }
 
+@media screen and (max-width: 400px) {
+  .questionItem .question {
+    font-size: 1.1rem;
+  }
 
-@media screen and (max-width:400px) {
+  .questionItem {
+    height: 70px;
+  }
 
-    .questionItem .question {
-        font-size: 1.1rem;
-    }
-
-    .questionItem {
-        height: 70px;
-    }
-
-    .questionItem.open {
-        height: 140px;
-    }
+  .questionItem.open {
+    height: 140px;
+  }
 }
