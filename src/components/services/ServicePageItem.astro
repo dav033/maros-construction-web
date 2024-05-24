@@ -35,8 +35,7 @@ import Image from "astro/components/Image.astro";
     font-size: 24px;
     font-weight: bold;
     font-family: "Avenir";
-    margin-bottom: 14px;
-    margin-top: 14px;
+    margin: 14px 0;
     text-align: left;
     width: 100%;
     min-height: 58px;
@@ -44,7 +43,6 @@ import Image from "astro/components/Image.astro";
 
   .serviceItem p {
     width: 100%;
-    text-align: center;
     text-align: left;
     font-size: 16px;
     font-weight: 300;
@@ -102,13 +100,13 @@ import Image from "astro/components/Image.astro";
     }
 
     .serviceItem p {
-      min-height: inherit;
+      min-height: auto;
     }
   }
 
   @media screen and (max-width: 500px) {
     .serviceItem {
-      max-width: 320px;
+      max-width: 280px;
     }
   }
 </style>
