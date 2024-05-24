@@ -9,11 +9,11 @@ import imageAboutUsPrincipal from "../public/images/aboutUsPrincipal.webp";
 import imageMediumAboutUsPrincipal from "../public/images/aboutUsPrincipal-medium.webp";
 import imageSmallAboutUsPrincipal from "../public/images/aboutUsPrincipal-small.webp";
 import imagePresentation1 from "../public/images/imagePresentation1.webp";
-import imagePresentation2 from "../public/images/imagePresentation2.webp";
+import imagePresentation2 from "../public/images/ImagePresentation2.webp";
 import imagePresentation1Medium from "../public/images/imagePresentation1-medium.webp";
-import imagePresentation2Medium from "../public/images/imagePresentation2-medium.webp";
+import imagePresentation2Medium from "../public/images/ImagePresentation2-medium.webp";
 import imagePresentation1Small from "../public/images/imagePresentation1-small.webp";
-import imagePresentation2Small from "../public/images/imagePresentation2-small.webp";
+import imagePresentation2Small from "../public/images/ImagePresentation2-small.webp";
 import imageAboutPresentation from "../public/images/aboutImage.webp"
 import design from "../public/images/design.webp"
 import laws from "../public/images/laws.webp"
