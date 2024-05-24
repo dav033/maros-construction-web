@@ -1,20 +1,19 @@
 ---
-import design from "../../assets/images/design.webp";
-import laws from "../../assets/images/laws.webp";
 import ProcessItem from "./ProcessItem.astro";
+import images from "../../images";
 ---
 
 <section class="process">
   <h2>Understand our process</h2>
 
   <div class="container">
-    <ProcessItem title="Collaboration and Design" image={design}>
+    <ProcessItem title="Collaboration and Design" image={images.design}>
       We work closely with you to understand your unique needs, style, and
       budget, translating your ideas into a stunning and functional design plan
       that reflects your personality.
     </ProcessItem>
 
-    <ProcessItem title="Permits and Approvals" image={laws}>
+    <ProcessItem title="Permits and Approvals" image={images.laws}>
       We navigate the complexities of legal and construction permits, ensuring
       your project adheres to all regulations and progresses smoothly.
     </ProcessItem>

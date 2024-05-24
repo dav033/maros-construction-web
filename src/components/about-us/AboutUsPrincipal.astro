@@ -1,8 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import image from "../../assets/images/aboutUsPrincipal.webp";
-import imageMedium from "../../assets/images/aboutUsPrincipal-medium.webp";
-import imageSmall from "../../assets/images/aboutUsPrincipal-small.webp";
+import images from "../../images";
 ---
 
 <section class="principal">
@@ -11,17 +9,17 @@ import imageSmall from "../../assets/images/aboutUsPrincipal-small.webp";
 
     <picture>
       <source
-        srcset={imageMedium.src}
+        srcset={images.imageMediumAboutUsPrincipal.src}
         media="(max-width: 1050px)"
         type="image/webp"
       />
       <source
-        srcset={imageSmall.src}
+        srcset={images.imageSmallAboutUsPrincipal.src}
         media="(max-width: 500px)"
         type="image/webp"
       />
       <Image
-        src={image}
+        src={images.imageAboutUsPrincipal}
         alt="sampleImage"
         class="background-image"
         width={1200}
