@@ -10,14 +10,16 @@
     modern addition, or a custom application, we pour our passion into every
     project. Trust us to elevate your vision, one concrete masterpiece at a
     time.
-    <button>LEARN MORE</button>
   </p>
+  <a href = "/about-us" aria-label ="About Us">LEARN MORE</a>
 </div>
 
 <style>
   .service-introduction {
     width: 100%;
     margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
   }
 
   .service-introduction p {
@@ -29,7 +31,7 @@
     font-family: "Gotham", sans-serif;
   }
 
-  .service-introduction p button {
+  .service-introduction a {
     display: block;
     border: none;
     font-family: "Gotham", sans-serif;
@@ -37,14 +39,17 @@
     color: var(--white);
     font-size: 14px;
     padding: 15px 25px;
-    margin-top: 10px;
+    margin-top: 15px;
     cursor: pointer;
     font-weight: normal;
     transition: all 0.2s ease-in-out;
     letter-spacing: 0.04235rem;
+    margin-left: 7rem;
+
+    width: 160px;
   }
 
-  .service-introduction p buutton:hover {
+  .service-introduction p button:hover {
     background-color: #ff2b2b;
   }
 
@@ -53,10 +58,14 @@
       margin-top: 5rem;
     }
     .service-introduction p {
-      margin-left: 0;
+      margin-left: 1rem;
       padding: 0 10px;
       margin-bottom: 20px;
       /* text-align: center; */
+    }
+
+    .service-introduction a {
+      margin-left: 1rem;
     }
   }
 
@@ -70,12 +79,22 @@
       margin-bottom: 20px;
       /* text-align: center; */
     }
+
+    .service-introduction a {
+      margin-left: 0;
+    }
   }
 
   @media (max-width: 500px) {
     .service-introduction p {
       font-size: 14px;
       padding: 0;
+    }
+
+    .service-introduction a {
+      font-size: 13px;
+      padding: 10px 20px;
+      width: 140px;
     }
   }
 </style>
