@@ -1,43 +1,77 @@
 ---
 import { Image } from "astro:assets";
+import GoogleIcon from "../../assets/icons/google.icon.astro";
 
 const { image, rating, username, date } = Astro.props;
 ---
 
 <div class="opinion">
-  <Image src={image} alt="Opinion" width={36} height={36} />
+  <div class="userInfo">
+    <Image src={image} alt="Opinion" width={36} height={36} />
 
-  <div>
+    <div class="username">
+      <a
+        href="https://www.google.com/maps/place/Maros+Construction/@25.9883759,-80.4482804,9z/data=!3m1!4b1!4m6!3m5!1s0x691fa2b3593a81:0xdd0f387040f5ff0e!8m2!3d25.9883759!4d-80.4482804!16s%2Fg%2F11l737smp1?authuser=0&hl=es-419&entry=ttu"
+        target="_blank">{username}</a
+      >
+
+      <span>{date}</span>
+    </div>
+
+    <GoogleIcon />
+  </div>
+
+  <div class="stars">
     {Array.from({ length: rating }).map((_, index) => <span>★</span>)}
   </div>
 
   <p><slot /></p>
-
-  <a
-    href="https://www.google.com/maps/place/Maros+Construction/@25.9883759,-80.4482804,9z/data=!3m1!4b1!4m6!3m5!1s0x691fa2b3593a81:0xdd0f387040f5ff0e!8m2!3d25.9883759!4d-80.4482804!16s%2Fg%2F11l737smp1?authuser=0&hl=es-419&entry=ttu"
-    target="_blank">{username}</a
-  >
 </div>
 
 <style>
   .opinion {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     margin: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 470px;
-    height: 295px;
-    background-color: #1111110d;  
+    border-radius: 20px;
+    width: 390px;
+    height: fit-content;
+    background-color: transparent;
+    padding: 16px;
   }
 
-  .opinion div {
+  .opinion .userInfo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    /* background-color: red; */
+  }
+
+  .opinion .userInfo img {
+    margin-right: 10px;
+  }
+
+  .opinion .userInfo .username {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+  }
+
+  .opinion .userInfo .username span {
+    font-size: 14px;
+    color: #bcbcbc;
+  }
+
+  .opinion .stars {
     margin-top: 5px;
+    padding-left: 10px;
   }
 
-  .opinion div span {
+  .opinion .stars span {
     color: #f1c40f;
     font-size: 1.5em;
   }
