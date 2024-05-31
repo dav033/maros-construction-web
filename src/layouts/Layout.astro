@@ -6,26 +6,66 @@ import Footer from "../components/Footer.astro";
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="Maros Construction: Expert Concrete Services in Miami, FL. Specializing in Concrete Restoration & Waterproofing, Concrete Works, Driveways & Floors, Home & Apartment Renovations, and Home Additions. Quality craftsmanship and reliable service for all your construction needs."
-    />
-    <link rel="stylesheet" href="/styles/global.css" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "GeneralContractor",
+      "name": "Maros Construction",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1470 NE 123 street",
+        "addressLocality": "Miami",
+        "addressRegion": "FL",
+        "postalCode": ""
+      },
+      "email": "info@maroscontruction.com",
+      "telePhone": "786-707-0815",
+      "url": "marosconstruction.com",
+      "paymentAccepted": ["cash"],
+      "openingHours": "Mo,Tu,We,Th,Fr,Sa 0-0",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "0",
+          "closes": "0"
+        }
+      ],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "25.8898112",
+        "longitude": "-80.1693156"
+      },
+      "priceRange": "$$"
+    }
+  </script>
 
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/webp" href="/images/marosicon2.webp" />
+  <meta charset="UTF-8" />
+  <meta
+    name="description"
+    content="Maros Construction: Expert Concrete Services in Miami, FL. Specializing in Concrete Restoration & Waterproofing, Concrete Works, Driveways & Floors, Home & Apartment Renovations, and Home Additions. Quality craftsmanship and reliable service for all your construction needs."
+  />
+  <link rel="stylesheet" href="/styles/global.css" />
 
-    <link
-      rel="preload"
-      type="image/webp"
-      fetchpriority="high"
-      as="image"
-      href="/images/1000249305_0194e.webp"
-    />
-    <meta name="generator" content={Astro.generator} />
-  </head>
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" type="image/webp" href="/images/marosicon2.webp" />
+
+  <link
+    rel="preload"
+    type="image/webp"
+    fetchpriority="high"
+    as="image"
+    href="/images/1000249305_0194e.webp"
+  />
+  <meta name="generator" content={Astro.generator} />
+
   <body>
     <Navbar />
     <slot />
