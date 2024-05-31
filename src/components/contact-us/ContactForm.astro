@@ -1,0 +1,63 @@
+---
+
+---
+
+<form class="contact-form">
+  <input type="text" placeholder="Name" />
+  <input type="email" placeholder="Email" />
+  <input type="text" placeholder="Service" />
+  <textarea placeholder="Message"></textarea>
+  <button>Send</button>
+</form>
+
+<style>
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    outline: none;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    border-radius: 7px;
+    border: 1px solid black;
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+    font-size: 16px;
+  }
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border: 1px solid #ff6b6b;
+  }
+  .contact-form button {
+    padding: 8px 0px;
+    border: none;
+    background-color: #ff6b6b;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .contact-form button:hover {
+    background-color: #fe5c5c;
+  }
+  .contact-form textarea {
+    height: 150px;
+    resize: none;
+    max-width: 100%;
+  }
+  @media (max-width: 900px) {
+    .contact-form {
+      width: 50%;
+    }
+  }
+  @media (max-width: 760px) {
+    .contact-form {
+      width: 100%;
+    }
+  }
+</style>

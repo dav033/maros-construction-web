@@ -1,8 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Location from "../assets/icons/location.icon.astro";
-import Phone from "../assets/icons/phone.icon.astro";
-import Mail from "../assets/icons/mail.icon.astro";
+import { Image } from "astro:assets";
+import images from "../../public/images";
+import Information from "../components/contact-us/ContactInformation.astro";
+import ContactForm from "../components/contact-us/ContactForm.astro";
 ---
 
 <script>
@@ -11,33 +12,25 @@ import Mail from "../assets/icons/mail.icon.astro";
 
 <Layout>
   <div class="contact-us">
+    <picture>
+      <Image src={images.contactUs} alt="Contact Us" />
+      <source
+        srcset={images.contactUsMedium.src}
+        type="image/webp"
+        media="(max-width:1050px)"
+      />
+      <source
+        srcset={images.contactUsSmall.src}
+        type="image/webp"
+        media="(max-width:500px)"
+      />
+    </picture>
+
     <div class="container">
       <h1>Contact Us</h1>
       <div class="body">
-        <form>
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Email" />
-          <input type="text" placeholder="Service" />
-          <textarea placeholder="Message"></textarea>
-          <button>Send</button>
-        </form>
-
-        <div class="information">
-          <div>
-            <Location class="icon" />
-            <span>Miami, Florida</span>
-          </div>
-
-          <div>
-            <Phone class="icon" />
-            <span>(786) 707-0815</span>
-          </div>
-
-          <div>
-            <Mail class="icon" />
-            <span>info@marosconstruction.com</span>
-          </div>
-        </div>
+        <ContactForm />
+        <Information />
       </div>
     </div>
   </div>
@@ -51,11 +44,20 @@ import Mail from "../assets/icons/mail.icon.astro";
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url("../../public/images/sandy-millar-u1kg_wztnkg-unsplash.webp");
     position: relative;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+  }
+
+  .contact-us img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
   }
   .contact-us::before {
     content: "";
@@ -83,75 +85,14 @@ import Mail from "../assets/icons/mail.icon.astro";
     justify-content: center;
     padding: 10px 30px;
   }
-  .contact-us .container form {
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-  }
-  .contact-us .container form input,
-  .contact-us .container form textarea {
-    outline: none;
-    margin-bottom: 20px;
-    padding: 10px 15px;
-    border-radius: 7px;
-    border: 1px solid black;
-    background-color: transparent;
-    transition: all 0.2s ease-in-out;
-    font-size: 16px;
-  }
-  .contact-us .container form input:focus,
-  .contact-us .container form textarea:focus {
-    border: 1px solid #ff6b6b;
-  }
-  .contact-us .container form button {
-    padding: 8px 0px;
-    border: none;
-    background-color: #ff6b6b;
-    color: white;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    border-radius: 20px;
-    font-size: 16px;
-    font-weight: 600;
-  }
-  .contact-us .container form button:hover {
-    background-color: #fe5c5c;
-  }
-  .contact-us .container form textarea {
-    height: 150px;
-    resize: none;
-    max-width: 100%;
-  }
-  .contact-us .container .information {
-    display: flex;
-    flex-direction: column;
-    padding-left: 60px;
-  }
-  .contact-us .container .information div {
-    margin-bottom: 30px;
-    display: flex;
-    align-items: center;
-  }
-  .contact-us .container .information div .icon {
-    margin-right: 30px;
-    font-size: 24px;
-    color: #7c7c7c;
-  }
-  .contact-us .container .information div span {
-    font-size: 18px;
-    font-weight: 100;
-  }
   @media (max-width: 900px) {
     .contact-us .container {
       width: 90%;
+      padding: 20px;
     }
-    .contact-us .container .body form {
-      width: 50%;
-    }
-    .contact-us .container .body .information {
-      width: 50%;
-      padding-right: 5px;
-      padding-left: 10px;
+
+    .contact-us .container .body {
+      padding: 0;
     }
   }
   @media (max-width: 760px) {
@@ -163,14 +104,6 @@ import Mail from "../assets/icons/mail.icon.astro";
     .contact-us .container .body {
       flex-direction: column-reverse;
       align-items: center;
-    }
-    .contact-us .container .body form {
-      width: 100%;
-    }
-    .contact-us .container .body .information {
-      width: 100%;
-      padding: 0;
-      padding-top: 20px;
     }
   }
   @media (max-width: 450px) {
@@ -186,17 +119,6 @@ import Mail from "../assets/icons/mail.icon.astro";
     .contact-us .container .body form {
       width: 100%;
     }
-    .contact-us .container .body .information {
-      width: 100%;
-      padding: 0;
-      padding-top: 20px;
-    }
-    .contact-us .container .body .information div span {
-      font-size: 16px;
-      word-break: break-all;
-    }
-    .contact-us .container .body .information div .icon {
-      margin-right: 10px;
-    }
   }
 </style>
+```

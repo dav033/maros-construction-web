@@ -14,9 +14,12 @@ import imagePresentation1Medium from "/public/images/imagePresentation1-medium.w
 import imagePresentation2Medium from "/public/images/ImagePresentation2-medium.webp";
 import imagePresentation1Small from "/public/images/imagePresentation1-small.webp";
 import imagePresentation2Small from "/public/images/ImagePresentation2-small.webp";
-import imageAboutPresentation from "/public/images/aboutImage.webp"
-import design from "/public/images/design.webp"
-import laws from "/public/images/laws.webp"
+import imageAboutPresentation from "/public/images/aboutImage.webp";
+import design from "/public/images/design.webp";
+import laws from "/public/images/laws.webp";
+import contactUs from "/public/images/contact-us.webp";
+import contactUsMedium from "/public/images/contact-us-medium.webp";
+import contactUsSmall from "/public/images/contact-us-small.webp";
 
 const images = {
   concrete,
@@ -37,7 +40,10 @@ const images = {
   imagePresentation2Small,
   imageAboutPresentation,
   design,
-  laws
+  laws,
+  contactUs,
+  contactUsMedium,
+  contactUsSmall,
 };
 
 export default images;

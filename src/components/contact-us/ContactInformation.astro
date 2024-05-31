@@ -1,0 +1,77 @@
+---
+import Location from "../../assets/icons/location.icon.astro";
+import Phone from "../../assets/icons/phone.icon.astro";
+import Mail from "../../assets/icons/mail.icon.astro";
+---
+
+<div class="information">
+  <div>
+    <Location class="icon" />
+    <span>Miami, Florida</span>
+  </div>
+
+  <div>
+    <Phone class="icon" />
+    <span>(786) 707-0815</span>
+  </div>
+
+  <div>
+    <Mail class="icon" />
+    <span>info@marosconstruction.com</span>
+  </div>
+</div>
+
+<style>
+  .information {
+    display: flex;
+    flex-direction: column;
+    padding-left: 60px;
+  }
+  .information div {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+  }
+  .information div .icon {
+    margin-right: 30px;
+    font-size: 24px;
+    color: #7c7c7c;
+  }
+  .information div span {
+    font-size: 18px;
+    font-weight: 100;
+  }
+  @media (max-width: 900px) {
+    .information {
+      width: 50%;
+      padding-right: 30px;
+      padding-left: 30px;
+      align-items: flex-start;
+    }
+
+    .information div {
+      margin-bottom: 20px;
+    }
+
+    .information div .icon {
+      margin-right: 20px;
+      /* font-size: 20px; */
+    }
+  }
+  @media (max-width: 760px) {
+    .information {
+      width: 100%;
+      padding: 0;
+      padding-top: 20px;
+    }
+  }
+  @media (max-width: 380px) {
+    .information div span {
+      font-size: 16px;
+      word-break: break-all;
+    }
+    .information div .icon {
+      margin-right: 10px;
+    }
+  }
+</style>
