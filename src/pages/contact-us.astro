@@ -4,6 +4,7 @@ import { Image } from "astro:assets";
 import images from "../../public/images";
 import Information from "../components/contact-us/ContactInformation.astro";
 import ContactForm from "../components/contact-us/ContactForm.astro";
+import ImageResponsive from "../components/ImageResponsive.astro";
 ---
 
 <script>
@@ -12,19 +13,12 @@ import ContactForm from "../components/contact-us/ContactForm.astro";
 
 <Layout>
   <div class="contact-us">
-    <picture>
-      <Image src={images.contactUs} alt="Contact Us" />
-      <source
-        srcset={images.contactUsMedium.src}
-        type="image/webp"
-        media="(max-width:1050px)"
-      />
-      <source
-        srcset={images.contactUsSmall.src}
-        type="image/webp"
-        media="(max-width:500px)"
-      />
-    </picture>
+    <ImageResponsive
+      defaultImage={images.contactUs}
+      mediumImage={images.contactUsMedium}
+      smallImage={images.contactUsSmall}
+      alt="Contact Us"
+    />
 
     <div class="container">
       <h1>Contact Us</h1>

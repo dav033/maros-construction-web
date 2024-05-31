@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets";
+
+const props = Astro.props;
+---
+
+<picture>
+  <source
+    srcset={props.mediumImage.src}
+    media="(max-width: 1050px)"
+    type="image/webp"
+  />
+
+  <source
+    srcset={props.smallImage.src}
+    media="(max-width: 500px)"
+    type="image/webp"
+  />
+
+  <Image
+    src={props.defaultImage}
+    loading="eager"
+    width={1200}
+    height={1000}
+    alt={props.alt}
+    {...props}
+  />
+</picture>

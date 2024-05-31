@@ -1,32 +1,20 @@
 ---
 import { Image } from "astro:assets";
 import images from "../../../public/images";
+import ImageResponsive from "../ImageResponsive.astro";
 ---
 
 <section class="principal">
   <div>
     <h1>Who Are We?</h1>
 
-    <picture>
-      <source
-        srcset={images.imageMediumAboutUsPrincipal.src}
-        media="(max-width: 1050px)"
-        type="image/webp"
-      />
-      <source
-        srcset={images.imageSmallAboutUsPrincipal.src}
-        media="(max-width: 500px)"
-        type="image/webp"
-      />
-      <Image
-        src={images.imageAboutUsPrincipal}
-        alt="sampleImage"
-        class="background-image"
-        width={1200}
-        height={1000}
-        loading="eager"
-      />
-    </picture>
+    <ImageResponsive
+      defaultImage={images.imageAboutUsPrincipal}
+      mediumImage={images.imageMediumAboutUsPrincipal}
+      smallImage={images.imageSmallAboutUsPrincipal}
+      alt="sampleImage"
+      class="background-image"
+    />
 
     <p>
       At Maros Construction, we’re more than just builders; we’re creators,
