@@ -1,13 +1,29 @@
 ---
+import utils from "../../../public/utils";
 
+if (Astro.request.method === "POST") {
+  try {
+    const data = await Astro.request.formData();
+    const name = data.get("name");
+    const email = data.get("email");
+    const phone = data.get("phone");
+    const message = data.get("message");
+    const subject = data.get("subject");
+
+    fetch;
+
+    utils.sendEmail(name, email, phone, message, subject);
+  } catch (err) {}
+}
 ---
 
-<form class="contact-form">
-  <input type="text" placeholder="Name" />
-  <input type="email" placeholder="Email" />
-  <input type="text" placeholder="Service" />
-  <textarea placeholder="Message"></textarea>
-  <button>Send</button>
+<form class="contact-form" method = "POST">
+  <input type="text" placeholder="Name" name="name" />
+  <input type="email" placeholder="Email" name="email" />
+  <input type="text" placeholder="Service" name="subject" />
+  <input type="tel" name="phone" placeholder="Phone" id="tel" required />
+  <textarea placeholder="Message" name="message"></textarea>
+  <button>SUBMIT</button>
 </form>
 
 <style>

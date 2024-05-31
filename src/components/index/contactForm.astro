@@ -111,4 +111,32 @@ if (Astro.request.method === "POST") {
       height: 80px;
     }
   }
+
+  @media screen and (max-width: 670px) {
+    form {
+      width: 80%;
+    }
+  }
+  @media screen and (max-width: 570px) {
+    form {
+      width: 100%;
+    }
+
+    form h3 {
+      font-size: 1.4em;
+    }
+
+    form input,
+    form textarea {
+      font-size: 12px;
+    }
+
+    form button {
+      font-size: 14px;
+    }
+
+    form textarea {
+      height: 60px;
+    }
+  }
 </style>
