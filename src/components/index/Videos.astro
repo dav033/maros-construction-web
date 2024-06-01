@@ -5,16 +5,12 @@ import reel3 from "/videos/reel3.webm";
 import ExampleVideo from "./ExampleVideo.astro";
 import { Image } from "astro:assets";
 import images from "../../../public/images";
+import icon from "../../../public/images/maros-icon-original.png";
 ---
 
 <section class="videos">
   <div class="imageContainer">
-    <Image
-      src={images.originalIcon}
-      alt="Maros Construction"
-      width={450}
-      height={193}
-    />
+    <Image src={icon} alt="Maros Construction" width={450} height={193} />
   </div>
 
   <p>
@@ -35,11 +31,32 @@ import images from "../../../public/images";
 
 <style>
   .videos {
-    margin: 30px 20px 40px;
+    /* margin: 30px 20px 40px; */
     padding: 10px 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: var(--main-bg-color);
+    /* width: 100vw; */
+    background:
+      linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+      linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+      linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+      linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+      linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+      linear-gradient(
+        #1d1d1d 25%,
+        #1a1a1a 25%,
+        #1a1a1a 50%,
+        transparent 50%,
+        transparent 75%,
+        #242424 75%,
+        #242424
+      );
+    background-color: #131313;
+    background-size: 20px 20px;
+    background-size: 20px 20px;
+    padding: 40px 0;
   }
 
   .videos .imageContainer {
@@ -54,13 +71,14 @@ import images from "../../../public/images";
   }
 
   .videos p {
-    padding: 20px;
+    padding: 20px 55px;
     text-align: left;
     font-size: 1.2em;
     line-height: 1.7em;
     font-family: "Barlow";
     font-weight: 500;
     margin: 15px 0;
+    color: var(--white);
   }
 
   .container {
@@ -96,6 +114,4 @@ import images from "../../../public/images";
       height: auto;
     }
   }
-
-
 </style>
