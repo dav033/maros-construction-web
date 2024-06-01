@@ -1,5 +1,6 @@
 import "../../../public/styles/questioItem.css";
 import Arrow from "../../assets/icons/menu-arrow.icon";
+import React from "react";
 
 function QuestionItem({ question, isOpen, onClick }) {
   return (
