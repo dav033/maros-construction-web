@@ -1,25 +1,10 @@
 ---
-import { Image } from "astro:assets";
 import images from "../../../public/images";
-import ImageResponsive from "../ImageResponsive.astro";
 ---
 
-<div class={`imageContent principal`}>
-  <ImageResponsive
-    defaultImage={images.imagePresentation1}
-    mediumImage={images.imagePresentation1Medium}
-    smallImage={images.imagePresentation1Small}
-    alt="Maros Construction"
-    class="background-image image1"
-  />
-
-  <ImageResponsive
-    defaultImage={images.imagePresentation2}
-    mediumImage={images.imagePresentation2Medium}
-    smallImage={images.imagePresentation2Small}
-    alt="Maros Construction"
-    class="background-image image2"
-  />
+<div class="imageContent principal">
+  <div class="background-image image1"></div>
+  <div class="background-image image2"></div>
   <h3>Committed to your project</h3>
 </div>
 
@@ -39,7 +24,8 @@ import ImageResponsive from "../ImageResponsive.astro";
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    background-size: cover;
+    background-position: center;
     transition:
       opacity 1s ease-in-out,
       transform 9s ease-in-out;
@@ -47,11 +33,13 @@ import ImageResponsive from "../ImageResponsive.astro";
   }
 
   .image1 {
+    background-image: url("../../../public/images/imagePresentation1.webp");
     opacity: 1;
     animation: changeToImage1 18s infinite;
   }
 
   .image2 {
+    background-image: url("../../../public/images/imagePresentation2.webp");
     opacity: 0;
     animation: changeToImage2 18s infinite;
   }
@@ -119,8 +107,11 @@ import ImageResponsive from "../ImageResponsive.astro";
   }
 
   @media (max-width: 1050px) {
-    .imageContent {
-      height: 77vh;
+    .image1 {
+      background-image: url("../../../public/images/imagePresentation1-medium.webp");
+    }
+    .image2 {
+      background-image: url("../../../public/images/imagePresentation2-medium.webp");
     }
     .imageContent h3 {
       font-size: 2.2rem;
@@ -144,6 +135,18 @@ import ImageResponsive from "../ImageResponsive.astro";
   @media (max-width: 600px) {
     .imageContent h3 {
       font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .image1 {
+      background-image: url("../../../public/images/imagePresentation1-small.webp");
+    }
+    .image2 {
+      background-image: url("../../../public/images/imagePresentation2-small.webp");
+    }
+    .imageContent h3 {
+      font-size: 1.8rem;
     }
   }
 
