@@ -1,8 +1,8 @@
 import { useState, useEffect, useCallback } from "react";
 import "../../../public/styles/sidebar.css";
-import { CiMenuBurger } from "react-icons/ci";
-import { AiOutlineClose } from "react-icons/ai";
 import classNames from "classnames";
+import { Hamburger } from "../../assets/icons/Hamburger.icon";
+import { Close } from "../../assets/icons/Close.icon";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,13 +24,17 @@ const Sidebar = () => {
 
   return (
     <div className="sidebarContainer">
-      <button onClick={handleMenu} className="hamburger" aria-label="Sidebar Menu">
-        <CiMenuBurger className="icon" />
+      <button
+        onClick={handleMenu}
+        className="hamburger"
+        aria-label="Sidebar Menu"
+      >
+        <Hamburger className="icon" />
       </button>
 
       <div className={classNames("sidebar", { open: isOpen })}>
         <button onClick={handleMenu} className="close" aria-label="Close Menu">
-          <AiOutlineClose className="icon" />
+          <Close className="icon" />
         </button>
         <a href="/">Home</a>
         <a href="/services">Services</a>

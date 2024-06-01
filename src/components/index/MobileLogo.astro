@@ -4,9 +4,7 @@ let { src, id } = Astro.props;
 ---
 
 <a class="mobile-logo" href="/" id={id}>
-  <!-- <img src={src} /> -->
-
-  <Image src={src} width={150} height={65} alt="logo" />
+  <Image src={src} width={150} height={65} alt="logo" loading="eager" />
 </a>
 
 <style>
