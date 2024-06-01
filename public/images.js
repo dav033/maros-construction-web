@@ -20,6 +20,7 @@ import laws from "/public/images/laws.webp";
 import contactUs from "/public/images/contact-us.webp";
 import contactUsMedium from "/public/images/contact-us-medium.webp";
 import contactUsSmall from "/public/images/contact-us-small.webp";
+import originalIcon from "/public/images/maros-icon-original.webp";
 
 const images = {
   concrete,
@@ -44,6 +45,7 @@ const images = {
   contactUs,
   contactUsMedium,
   contactUsSmall,
+  originalIcon,
 };
 
 export default images;

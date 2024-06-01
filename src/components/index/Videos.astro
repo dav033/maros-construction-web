@@ -3,34 +3,99 @@ import reel1 from "/videos/reel1.webm";
 import reel2 from "/videos/reel2.webm";
 import reel3 from "/videos/reel3.webm";
 import ExampleVideo from "./ExampleVideo.astro";
+import { Image } from "astro:assets";
+import images from "../../../public/images";
 ---
 
 <section class="videos">
-  <ExampleVideo src={reel1} />
+  <div class="imageContainer">
+    <Image
+      src={images.originalIcon}
+      alt="Maros Construction"
+      width={450}
+      height={193}
+    />
+  </div>
 
-  <ExampleVideo src={reel2} />
+  <p>
+    At Maros Construction, we are dedicated to ensuring that every project is
+    unique and exceptional. Our commitment is to deliver high-quality
+    craftsmanship and personalized service, making each job a standout in its
+    own right. We believe in the importance of attention to detail and customer
+    satisfaction, and we work tirelessly to exceed expectations on every
+    project.
+  </p>
 
-  <ExampleVideo src={reel3} />
+  <div class="container">
+    <ExampleVideo src={reel1} />
+    <ExampleVideo src={reel2} />
+    <ExampleVideo src={reel3} />
+  </div>
 </section>
 
 <style>
   .videos {
     margin: 30px 20px 40px;
+    padding: 10px 100px;
     display: flex;
-    padding: 10px;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
   }
 
-  @media (max-width: 840px) {
+  .videos .imageContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 0px;
+  }
+
+  .videos img {
+  }
+
+  .videos p {
+    padding: 20px;
+    text-align: left;
+    font-size: 1.2em;
+    line-height: 1.7em;
+    font-family: "Barlow";
+    font-weight: 500;
+    margin: 15px 0;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 1000px) {
     .videos {
-      padding: 5px;
+      padding: 10px 50px;
+    }
+
+    .videos .container {
+      flex-direction: column;
+    }
+
+    .videos p {
+      font-size: 1em;
     }
   }
 
   @media (max-width: 650px) {
     .videos {
-      flex-direction: column;
+      padding: 0;
     }
   }
+
+  @media (max-width: 450px) {
+    .videos .imageContainer img {
+      width: 90%;
+      height: auto;
+    }
+  }
+
+
 </style>
