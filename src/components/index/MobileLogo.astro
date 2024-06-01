@@ -4,14 +4,19 @@ let { src, id } = Astro.props;
 ---
 
 <a class="mobile-logo" href="/" id={id}>
-  <Image src={src} width={150} height={65} alt="Maros Construction" loading="eager" />
+  <Image
+    src={src}
+    width={1000}
+    height={65}
+    alt="Maros Construction"
+    loading="eager"
+  />
 </a>
 
 <style>
   .mobile-logo {
-    width: 150px;
-    height: 65px;
-    display: none;
+    width: 190px;
+    height: 75px;
   }
 
   .mobile-logo img {
@@ -25,6 +30,8 @@ let { src, id } = Astro.props;
 
   @media (max-width: 1000px) {
     .mobile-logo {
+      width: 150px;
+      height: 65px;
       display: block;
     }
   }

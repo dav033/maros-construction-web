@@ -24,7 +24,7 @@ import MobileLogo from "./index/MobileLogo.astro";
 </script>
 
 <nav class={`navbar-v2`}>
-  <a class="logo" href="/" aria-label="Open Menu"> Maros Construction</a>
+  <!-- <a class="logo" href="/" aria-label="Open Menu"> Maros Construction</a> -->
 
   <MobileLogo src={mobileIconLight} id="light" />
 
@@ -68,18 +68,22 @@ import MobileLogo from "./index/MobileLogo.astro";
     color: black !important;
   }
 
-  :global(.navbar-v2 #dark) {
-    display: none;
-  }
-
-  :global(.navbar-v2.services #light) {
-    display: none;
-  }
-
   .navbar-v2.services .logo,
   .navbar-v2.about-us .logo {
     border-color: var(--main-bg-color);
     color: var(--main-bg-color);
+  }
+
+  :global(.navbar-v2.about-us #light, .navbar-v2.services #light) {
+    display: none !important;
+  }
+
+  :global(.navbar-v2.about-us #dark, .navbar-v2.services #dark) {
+    display: block !important;
+  }
+
+  :global(.navbar-v2 #dark) {
+    display: none;
   }
 
   .navbar-v2.services:hover::before,
@@ -139,10 +143,6 @@ import MobileLogo from "./index/MobileLogo.astro";
     .navbar-v2::before {
       top: -100% !important;
       opacity: 0 !important;
-    }
-
-    :global(.navbar-v2.services #dark) {
-      display: block;
     }
 
     .navbar-v2 .logo {
