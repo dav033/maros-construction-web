@@ -75,10 +75,10 @@ import MobileLogo from "./index/MobileLogo.astro";
   }
 
   :global(.navbar-v2.about-us #light, .navbar-v2.services #light) {
-    display: none !important;
+    display: none;
   }
 
-  :global(.navbar-v2.about-us #light, .navbar-v2.services #dark) {
+  :global(.navbar-v2.about-us #dark, .navbar-v2.services #dark) {
     display: block !important;
   }
 
@@ -147,6 +147,14 @@ import MobileLogo from "./index/MobileLogo.astro";
 
     .navbar-v2 .logo {
       display: none;
+    }
+
+    :global(.navbar-v2.about-us #dark) {
+      display: none !important;
+    }
+
+    :global(.navbar-v2.about-us #light) {
+      display: block !important;
     }
 
     .navbar-v2 {
