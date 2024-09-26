@@ -6,68 +6,82 @@ import Footer from "../components/Footer.astro";
 
 <!doctype html>
 <html lang="en">
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "GeneralContractor",
-      "name": "Maros Construction",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "1470 NE 123 street",
-        "addressLocality": "Miami",
-        "addressRegion": "FL",
-        "postalCode": "33161"
-      },
-      "email": "info@maroscontruction.com",
-      "telePhone": "786-707-0815",
-      "url": "marosconstruction.com",
-      "l"
-      "paymentAccepted": ["check", "invoice", "paypal"],
-      "openingHours": "Mo,Tu,We,Th,Fr,Sa 07:00-17:00",
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday"
-          ],
-          "opens": "07:00",
-          "closes": "17:00"
-        }
-      ],
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "25.8898112",
-        "longitude": "-80.1693156"
-      },
-      "priceRange": "$$"
-    }
-  </script>
-
-  <meta charset="UTF-8" />
-  <meta
-    name="description"
-    content="Maros Construction: Expert Concrete Services in Miami, FL. Specializing in Concrete Restoration & Waterproofing, Concrete Works, Driveways & Floors, Home & Apartment Renovations, and Home Additions. Quality craftsmanship and reliable service for all your construction needs."
-  />
-
-  <link rel="stylesheet" href="/styles/global.css" />
-
-  <meta name="viewport" content="width=device-width" />
-  <link rel="icon" type="image/webp" href="/images/marosicon2.webp" />
-
-  <link
-    rel="preload"
-    type="image/webp"
-    fetchpriority="high"
-    as="image"
-    href="/images/1000249305_0194e.webp"
-  />
-  <meta name="generator" content={Astro.generator} />
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Maros Construction - Expert Construction Services in Miami, FL
+    </title>
+    <meta
+      name="description"
+      content="Maros Construction: Expert concrete services in Miami, FL. Specializing in concrete restoration & waterproofing, concrete works, driveways & floors, home & apartment renovations, and home additions. Quality craftsmanship and reliable service for all your construction needs."
+    />
+    <link rel="canonical" href="https://marosconstruction.com" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:title"
+      content="Maros Construction - Expert Construction Services in Miami"
+    />
+    <meta
+      property="og:description"
+      content="Expert construction services in Miami, FL. Specialists in concrete restoration, renovations, and more."
+    />
+    <meta property="og:url" content="https://marosconstruction.com" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://marosconstruction.com/images/marosicon2.webp"
+    />
+    <link rel="icon" type="image/webp" href="/images/marosicon2.webp" />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link
+      rel="preload"
+      as="image"
+      href="/images/1000249305_0194e.webp"
+      fetchpriority="high"
+      type="image/webp"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "GeneralContractor",
+        "name": "Maros Construction",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1470 NE 123 street",
+          "addressLocality": "Miami",
+          "addressRegion": "FL",
+          "postalCode": "33161"
+        },
+        "email": "info@marosconstruction.com",
+        "telephone": "786-707-0815",
+        "url": "https://marosconstruction.com",
+        "paymentAccepted": ["check", "invoice", "paypal"],
+        "openingHours": "Mo,Tu,We,Th,Fr,Sa 07:00-17:00",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "07:00",
+            "closes": "17:00"
+          }
+        ],
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "25.8898112",
+          "longitude": "-80.1693156"
+        },
+        "priceRange": "$$"
+      }
+    </script>
+  </head>
   <body>
     <Navbar />
     <slot />
