@@ -1,0 +1,36 @@
+---
+// Importamos los iconos desde "lucide-astro" en lugar de "lucide-react"
+import { Droplet, Flame, Bath, PlugIcon as Pipeline, FingerprintIcon as Faucet, Home } from 'lucide-astro';
+import Card from './Card.astro';
+---
+
+<section class="py-12 lg:py-24">
+  <div class="container px-4 md:px-6">
+    <div class="flex flex-col items-center text-center space-y-4 mb-12">
+      <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl">Common Plumbing Emergencies</h2>
+      <p class="mx-auto max-w-[700px] text-muted-foreground">
+        Our expert team is ready to handle any plumbing emergency
+      </p>
+    </div>
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <Card icon={Droplet} title="Burst or Leaking Pipes" subtitle="Fast response to prevent water damage and flooding">
+        We locate breaks, shut off water supply, and repair damaged pipes quickly.
+      </Card>
+      <Card icon={Flame} title="Water Heater Issues" subtitle="Same-day repairs and replacements">
+        Expert diagnosis and repair of all water heater problems.
+      </Card>
+      <Card icon={Bath} title="Clogged Toilets" subtitle="Professional drain clearing services">
+        Advanced equipment to clear even the toughest blockages.
+      </Card>
+      <Card icon={Pipeline} title="Sewer Line Backups" subtitle="Camera inspection and hydro-jetting">
+        Complete diagnosis and clearing of sewer line blockages.
+      </Card>
+      <Card icon={Faucet} title="Leaky Fixtures" subtitle="Stop wasting water and money">
+        Expert repair and replacement of all plumbing fixtures.
+      </Card>
+      <Card icon={Home} title="Flooded Basements" subtitle="Emergency water removal">
+        Quick response to prevent water damage and mold growth.
+      </Card>
+    </div>
+  </div>
+</section>

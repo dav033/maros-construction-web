@@ -41,6 +41,7 @@ if (Astro.request.method === "POST") {
     position: relative;
     color: var(--main-bg-color);
     z-index: 100;
+    box-sizing: content-box;
   }
 
   form span {
@@ -87,6 +88,7 @@ if (Astro.request.method === "POST") {
     cursor: pointer;
     font-family: "Barlow";
     font-size: 16px;
+    margin-bottom: 10px;
   }
 
   @media screen and (max-width: 900px) {

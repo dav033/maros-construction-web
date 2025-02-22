@@ -1,8 +1,58 @@
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/OpenSans-Regular.ttf");
+  src: url("../fonts/OpenSans-Regular.ttf");
   font-display: swap;
 }
+
+@font-face {
+  font-family: "Barlow";
+  src: url("../fonts/Barlow-Regular.ttf");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url("../fonts/Barlow-Regular.ttf");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url("../fonts/Barlow-Light.ttf");
+  font-weight: light;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url("../fonts/Barlow-Thin.ttf");
+  font-weight: thin;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../fonts/Gotham-Thin.otf");
+  font-weight: 100;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../fonts/gotham-black.woff2") format("woff2");
+  font-weight: bold;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../fonts/gotham-book.woff2") format("woff2");
+  font-weight: 300;
+  font-display: swap;
+}
+
 
 * {
   box-sizing: border-box;
@@ -16,6 +66,7 @@
   --main-bg-color: #222831;
   --main-color: #c40d3b;
 }
+
 html {
   padding: 0 !important;
   margin: 0 !important;

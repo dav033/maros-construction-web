@@ -1,0 +1,15 @@
+---
+// Se reciben las propiedades mediante Astro.props
+const { icon: Icon, title, subtitle } = Astro.props;
+---
+
+<div class="border rounded p-4 shadow">
+  <div class="mb-2">
+    {Icon && <Icon class="h-8 w-8 text-primary mb-2" />}
+    <h3 class="font-semibold">{title}</h3>
+    {subtitle && <p class="text-muted-foreground text-sm">{subtitle}</p>}
+  </div>
+  <div>
+    <slot />
+  </div>
+</div>

@@ -9,7 +9,13 @@ import Image from "astro/components/Image.astro";
 
 <footer class="footer-distributed">
   <div class="footer-left">
-    <Image src={icon} alt="Maros Construction" class="image" width={160} height={70} />
+    <Image
+      src={icon}
+      alt="Maros Construction"
+      class="image"
+      width={160}
+      height={70}
+    />
 
     <p class="footer-links">
       <a href="/" class="link-1" aria-label="Home">Home</a>
@@ -106,6 +112,10 @@ import Image from "astro/components/Image.astro";
 
     .footer-distributed .footer-center {
       width: 35%;
+    }
+
+    .footer-center div {
+      display: flex;
     }
 
     .footer-distributed .footer-center .icon {

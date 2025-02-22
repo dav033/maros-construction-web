@@ -1,0 +1,267 @@
+---
+import {
+  Phone,
+  Clock,
+  Shield,
+  CheckCircle,
+  MapPin,
+  Droplet,
+  Flame,
+  Bath,
+  PlugIcon as Pipeline,
+  FingerprintIcon as Faucet,
+  Home,
+} from "lucide-react";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <div class="flex flex-col min-h-screen">
+    <!-- Hero Section -->
+    <section
+      class="relative bg-[url('../../public/images/sigmund-uS_MT4wUXf0-unsplash.jpg')] bg-cover bg-center text-white py-12 lg:py-24 overflow-hidden pt-24"
+    >
+      <!-- Capa overlay para atenuar el fondo -->
+      <div class="absolute inset-0 bg-black opacity-20"></div>
+
+      <div class="container px-4 md:px-6 relative z-10">
+        <div class="flex flex-col items-center text-center space-y-4">
+          <div
+            class="inline-flex items-center gap-2 rounded-lg bg-gray-400/30 px-3 py-1 text-sm"
+          >
+            <Phone className="h-4 w-4" /> 24/7 Emergency Service
+          </div>
+          <h1
+            class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl"
+          >
+            Emergency Plumbing Services in Miami
+          </h1>
+          <p class="max-w-[700px] text-lg md:text-xl">
+            Fast, Reliable, and Available 24/7. When disaster strikes, we're
+            here to help!
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <button
+              class="px-6 py-3 rounded bg-background text-primary flex items-center bg-gray-300/50"
+            >
+              <Phone className="mr-2 h-4 w-4" /> Call Now: (888) 888-8888
+            </button>
+            <button
+              class="px-6 py-3 rounded border border-primary bg-gray-300/20"
+            >
+              Request Service Online
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 lg:py-24 mt-10">
+      <div class="container px-4 md:px-6">
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div class="flex flex-col items-center text-center space-y-2">
+            <Clock className="h-8 w-8 text-primary" />
+            <h3 class="font-semibold">Rapid Response</h3>
+            <p class="text-muted-foreground">We Arrive Fast!</p>
+          </div>
+          <div class="flex flex-col items-center text-center space-y-2">
+            <Shield className="h-8 w-8 text-primary" />
+            <h3 class="font-semibold">Licensed & Insured</h3>
+            <p class="text-muted-foreground">Trusted Local Experts</p>
+          </div>
+          <div class="flex flex-col items-center text-center space-y-2">
+            <CheckCircle className="h-8 w-8 text-primary" />
+            <h3 class="font-semibold">Transparent Pricing</h3>
+            <p class="text-muted-foreground">No Hidden Fees</p>
+          </div>
+          <div class="flex flex-col items-center text-center space-y-2">
+            <MapPin className="h-8 w-8 text-primary" />
+            <h3 class="font-semibold">Local Service</h3>
+            <p class="text-muted-foreground">Miami-Dade & Broward Counties</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-12 px-8 lg:py-24">
+      <div class="container px-4 md:px-6">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="space-y-4">
+            <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl">
+              Professional Plumbing Services You Can Trust
+            </h2>
+            <p class="text-muted-foreground">
+              With years of experience serving the Miami community, our team of
+              licensed plumbers is equipped to handle any plumbing emergency. We
+              understand that plumbing issues can be stressful and disruptive,
+              which is why we prioritize fast response times and efficient
+              solutions.
+            </p>
+            <p class="text-muted-foreground">
+              Our commitment to quality service means we use only the best
+              materials and latest techniques to ensure lasting repairs. Whether
+              you're dealing with a burst pipe, water heater failure, or any
+              other plumbing emergency, you can count on us to get the job done
+              right the first time.
+            </p>
+            <div class="flex gap-4">
+              <button
+                class="px-6 py-3 rounded border border-primary flex aling-center items-center bg-gray-300/90"
+              >
+                <Phone className="mr-2 h-4 w-4" /> Contact Us
+              </button>
+            </div>
+          </div>
+          <div
+            class="relative aspect-video md:aspect-square rounded-lg overflow-hidden"
+          >
+            <img
+              src="../../public/images/battlecreek-coffee-roasters-NfG4rXmceFM-unsplash.jpg"
+              alt="Professional Plumber at Work"
+              class="object-cover w-full h-full"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Area -->
+    <section class="py-12 lg:py-24 bg-gray-300/60">
+      <div class="container px-4 md:px-6">
+        <div class="flex flex-col items-center text-center space-y-4">
+          <h2
+            class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
+          >
+            Service Area
+          </h2>
+          <p class="mx-auto max-w-[700px] text-muted-foreground">
+            Proudly Serving the Miami-Dade & Broward Counties
+          </p>
+          <div
+            class="relative w-full max-w-2xl aspect-[2/1] mt-8 rounded-lg overflow-hidden"
+          >
+            <img
+              src="../../public/images/ashley-satanosky-mWN686Fsbgs-unsplash.jpg?height=400&width=800"
+              alt="Miami Service Area"
+              class="object-cover w-full h-full"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Common Emergencies -->
+    <section class="py-12 lg:py-24">
+      <div class="container px-4 md:px-6">
+        <div class="flex flex-col items-center text-center space-y-4 mb-12">
+          <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl">
+            Common Plumbing Emergencies
+          </h2>
+          <p class="mx-auto max-w-[700px] text-muted-foreground">
+            Our expert team is ready to handle any plumbing emergency
+          </p>
+        </div>
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Card 1 -->
+          <div class="border rounded p-4 shadow">
+            <div class="mb-2">
+              <Droplet className="h-8 w-8 text-primary mb-2" />
+              <h3 class="font-semibold">Burst or Leaking Pipes</h3>
+              <p class="text-muted-foreground text-sm">
+                Fast response to prevent water damage and flooding
+              </p>
+            </div>
+            <div>
+              We locate breaks, shut off water supply, and repair damaged pipes
+              quickly.
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="border rounded p-4 shadow">
+            <div class="mb-2">
+              <Flame className="h-8 w-8 text-primary mb-2" />
+              <h3 class="font-semibold">Water Heater Issues</h3>
+              <p class="text-muted-foreground text-sm">
+                Same-day repairs and replacements
+              </p>
+            </div>
+            <div>Expert diagnosis and repair of all water heater problems.</div>
+          </div>
+          <!-- Card 3 -->
+          <div class="border rounded p-4 shadow">
+            <div class="mb-2">
+              <Bath className="h-8 w-8 text-primary mb-2" />
+              <h3 class="font-semibold">Clogged Toilets</h3>
+              <p class="text-muted-foreground text-sm">
+                Professional drain clearing services
+              </p>
+            </div>
+            <div>Advanced equipment to clear even the toughest blockages.</div>
+          </div>
+          <!-- Card 4 -->
+          <div class="border rounded p-4 shadow">
+            <div class="mb-2">
+              <Pipeline className="h-8 w-8 text-primary mb-2" />
+              <h3 class="font-semibold">Sewer Line Backups</h3>
+              <p class="text-muted-foreground text-sm">
+                Camera inspection and hydro-jetting
+              </p>
+            </div>
+            <div>Complete diagnosis and clearing of sewer line blockages.</div>
+          </div>
+          <!-- Card 5 -->
+          <div class="border rounded p-4 shadow">
+            <div class="mb-2">
+              <Faucet className="h-8 w-8 text-primary mb-2" />
+              <h3 class="font-semibold">Leaky Fixtures</h3>
+              <p class="text-muted-foreground text-sm">
+                Stop wasting water and money
+              </p>
+            </div>
+            <div>Expert repair and replacement of all plumbing fixtures.</div>
+          </div>
+          <!-- Card 6 -->
+          <div class="border rounded p-4 shadow">
+            <div class="mb-2">
+              <Home className="h-8 w-8 text-primary mb-2" />
+              <h3 class="font-semibold">Flooded Basements</h3>
+              <p class="text-muted-foreground text-sm">
+                Emergency water removal
+              </p>
+            </div>
+            <div>Quick response to prevent water damage and mold growth.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section
+      class="py-12 lg:py-24 bg-primary bg-blue-900 text-white "
+    >
+      <div class="container px-4 md:px-6">
+        <div class="flex flex-col items-center text-center space-y-4">
+          <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl">
+            Don't Wait - Call Now!
+          </h2>
+          <p class="mx-auto max-w-[700px]">
+            24/7 Emergency Plumbing Services in Miami
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 font-bold">
+            <button
+              class="px-6 py-3 rounded bg-background text-primary hover:bg-gray-800/90 flex items-center text-blue-700 bg-black"
+            >
+              <Phone className="mr-2 h-4 w-4" />(786) 707-0815
+            </button>
+            <button
+              class="px-6 py-3 rounded border border-primary bg-primary-foreground/10"
+            >
+              Request Service Online
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
