@@ -13,13 +13,15 @@ import {
   Home,
 } from "lucide-react";
 import Layout from "../layouts/Layout.astro";
+import Image from "astro/components/Image.astro";
+import images from "../../public/images";
 ---
 
 <Layout>
   <div class="flex flex-col min-h-screen">
     <!-- Hero Section -->
     <section
-      class="relative bg-[url('../../public/images/sigmund-uS_MT4wUXf0-unsplash.webp')] bg-cover bg-center text-white py-12 lg:py-24 overflow-hidden pt-24"
+      class="relative bg-[url('/images/sigmund-uS_MT4wUXf0-unsplash.webp')] bg-cover bg-center text-white py-12 lg:py-24 overflow-hidden pt-24"
     >
       <!-- Capa overlay para atenuar el fondo -->
       <div class="absolute inset-0 bg-black opacity-20"></div>
@@ -116,8 +118,8 @@ import Layout from "../layouts/Layout.astro";
           <div
             class="relative aspect-video md:aspect-square rounded-lg overflow-hidden"
           >
-            <img
-              src="../../public/images/battlecreek-coffee-roasters-NfG4rXmceFM-unsplash.webp"
+            <Image
+              src={images.image2}
               alt="Professional Plumber at Work"
               class="object-cover w-full h-full"
             />
@@ -141,8 +143,8 @@ import Layout from "../layouts/Layout.astro";
           <div
             class="relative w-full max-w-2xl aspect-[2/1] mt-8 rounded-lg overflow-hidden"
           >
-            <img
-              src="../../public/images/ashley-satanosky-mWN686Fsbgs-unsplash.webp?height=400&width=800"
+            <Image
+              src={images.image3}
               alt="Miami Service Area"
               class="object-cover w-full h-full"
             />
@@ -237,9 +239,7 @@ import Layout from "../layouts/Layout.astro";
     </section>
 
     <!-- CTA Section -->
-    <section
-      class="py-12 lg:py-24 bg-primary bg-blue-900 text-white "
-    >
+    <section class="py-12 lg:py-24 bg-primary bg-blue-900 text-white">
       <div class="container px-4 md:px-6">
         <div class="flex flex-col items-center text-center space-y-4">
           <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl">
