@@ -15,19 +15,19 @@ const concreteData = [
       "Our expertise extends to all aspects of concrete construction. From pouring foundations to creating custom designs, we bring precision and creativity to every project.",
   },
 
-  {
-    title: "Driveways & Floors",
-    image: images.driveway,
-    description:
-      "Need a stunning driveway or durable flooring? Look no further. We craft driveways that enhance curb appeal and floors that withstand daily wear and tear.",
-  },
+  // {
+  //   title: "Driveways & Floors",
+  //   image: images.driveway,
+  //   description:
+  //     "Need a stunning driveway or durable flooring? Look no further. We craft driveways that enhance curb appeal and floors that withstand daily wear and tear.",
+  // },
 
-  {
-    title: "Home & Apartment Renovations",
-    image: images.home,
-    description:
-      "Transforming living spaces is our passion. Whether it’s a cozy apartment or a spacious home, we handle renovations with care, from layout adjustments to aesthetic upgrades.",
-  },
+  // {
+  //   title: "Home & Apartment Renovations",
+  //   image: images.home,
+  //   description:
+  //     "Transforming living spaces is our passion. Whether it’s a cozy apartment or a spacious home, we handle renovations with care, from layout adjustments to aesthetic upgrades.",
+  // },
 
   {
     title: "Home Additions",

@@ -9,13 +9,20 @@ import Image from "astro/components/Image.astro";
 
 <footer class="footer-distributed">
   <div class="footer-left">
-    <Image
-      src={icon}
-      alt="Maros Construction"
-      class="image"
-      width={160}
-      height={70}
-    />
+    <div class="flex flex-column">
+      <Image
+        src={icon}
+        alt="Maros Construction"
+        class="image"
+        width={160}
+        height={70}
+      />
+      <div class="flex flex-col text-white">
+        <span> CGC1537035 </span>
+        <span> CFC1432723 </span>
+        <span>  CBC1266752 </span>
+      </div>
+    </div>
 
     <p class="footer-links">
       <a href="/" class="link-1" aria-label="Home">Home</a>
