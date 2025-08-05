@@ -18,6 +18,9 @@ import Footer from "../components/Footer.astro";
     />
     <link rel="canonical" href="https://marosconstruction.com" />
     <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       property="og:title"
       content="Maros Construction - Expert Construction Services in Miami"
@@ -82,9 +85,30 @@ import Footer from "../components/Footer.astro";
       }
     </script>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17354005043"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-17354005043'); </script> 
+    <!-- Google Ads Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17354005043"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      
+      // Wait for gtag to be fully loaded before executing
+      gtag('js', new Date());
+      gtag('config', 'AW-17354005043', {
+        'allow_google_signals': false,
+        'allow_ad_personalization_signals': false
+      });
 
-    <script> gtag('event', 'conversion', {'send_to': 'AW-17354005043/0AaYCLqy7vYaELO0hNNA'}); </script> 
+      // Only fire conversion on actual user interactions, not bot crawls
+      document.addEventListener('DOMContentLoaded', function() {
+        if (typeof gtag !== 'undefined' && 
+            navigator.userAgent.indexOf('Googlebot') === -1 && 
+            navigator.userAgent.indexOf('AdsBot') === -1) {
+          gtag('event', 'conversion', {
+            'send_to': 'AW-17354005043/0AaYCLqy7vYaELO0hNNA'
+          });
+        }
+      });
+    </script>
   </head>
   <body>
     <Navbar />

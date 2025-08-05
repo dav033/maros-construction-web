@@ -4,8 +4,15 @@ import ContactForm from "./contactForm.astro";
 
 <head>
   <script>
-    gtag('event', 'conversion', {
-      'send_to': 'AW-17354005043/XRRVCLO1gvcaELO0hNNA'
+    // Wait for gtag to be available and only fire on user interaction
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof gtag !== 'undefined' && 
+          navigator.userAgent.indexOf('Googlebot') === -1 && 
+          navigator.userAgent.indexOf('AdsBot') === -1) {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17354005043/XRRVCLO1gvcaELO0hNNA'
+        });
+      }
     });
   </script>
 </head>

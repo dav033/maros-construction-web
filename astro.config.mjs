@@ -8,7 +8,6 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [react(), tailwind()],
   output: "server",
-  adapter: netlify(),
   adapter: netlify({
     edgeMiddleware: true
   }),
